@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oliver Zureick Photography | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Oliver Zureick Photography</h1>
+      <p class="tagline">Photography, graphics, and sports media work</p>
+
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="info-box">
+      <h2>Portfolio Overview</h2>
+      <p>
+        This page shows the kind of work I enjoy making the most. A lot of my portfolio is built around sports
+        because sports naturally create emotion, movement, and big moments. I like photographing those moments in
+        a way that feels polished but still real. Some photos are simple action shots, while others are more
+        creative and dramatic. I also create graphics that mix photography with design to make content that feels
+        promotional and professional. That mix of photography and graphic design helps my work stand out. It also
+        shows that I can create more than just single images. I can help build a full visual look around a team,
+        player, or event.
+      </p>
+
+      <p>
+        I want my portfolio to show range while still feeling consistent. That is why this page includes baseball,
+        basketball, swimming, and training images along with graphic design examples. Even though the subjects are
+        different, the overall style stays clean, modern, and focused on strong visuals. I want viewers to see that
+        I care about both storytelling and presentation. Good work should feel organized and intentional, not random.
+        This page is designed so visitors can look through different types of content without getting overwhelmed.
+        The button interaction below also gives the site a little movement while still keeping things simple.
+      </p>
+    </section>
+
+    <section class="info-box">
+      <h2>Filter the Portfolio</h2>
+      <button class="filter-btn" onclick="filterSelection('all')">Show All</button>
+      <button class="filter-btn" onclick="filterSelection('photo')">Photos</button>
+      <button class="filter-btn" onclick="filterSelection('graphic')">Graphics</button>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery-item filter-item photo">
+        <img src="images/DSC04069.jpg" alt="Black and white baseball portrait">
+        <h3>Baseball Portrait</h3>
+        <p>Moody sports portrait with a more dramatic style.</p>
+      </div>
+
+      <div class="gallery-item filter-item photo">
+        <img src="images/DSC02153.jpg" alt="Basketball teammate helping another player up">
+        <h3>Basketball Emotion</h3>
+        <p>A moment that shows teamwork and intensity during competition.</p>
+      </div>
+
+      <div class="gallery-item filter-item photo">
+        <img src="images/DSC02349.jpg" alt="Basketball player holding trophy">
+        <h3>Championship Moment</h3>
+        <p>Celebration and storytelling after a major win.</p>
+      </div>
+
+      <div class="gallery-item filter-item photo">
+        <img src="images/DSC07253.jpg" alt="Bench press in weight room">
+        <h3>Training Content</h3>
+        <p>Strength and conditioning photography with a clean athletic look.</p>
+      </div>
+
+      <div class="gallery-item filter-item photo">
+        <img src="images/DSC07207.jpg" alt="Athlete lifting in rack">
+        <h3>Weight Room Detail</h3>
+        <p>Framed to show effort, tension, and the environment.</p>
+      </div>
+
+      <div class="gallery-item filter-item graphic">
+        <img src="images/florida.png" alt="Baseball Florida graphic">
+        <h3>Baseball Travel Graphic</h3>
+        <p>Designed promotional piece using layered players and schedule text.</p>
+      </div>
+
+      <div class="gallery-item filter-item graphic">
+        <img src="images/Opening Day_.png" alt="Opening day baseball poster">
+        <h3>Opening Day Poster</h3>
+        <p>A clean baseball graphic that mixes branding and player cutouts.</p>
+      </div>
+
+      <div class="gallery-item filter-item graphic">
+        <img src="images/brvsmcnick.png" alt="Basketball game day graphic">
+        <h3>Basketball Gameday Graphic</h3>
+        <p>Promotional design built around team identity and school pride.</p>
+      </div>
+
+      <div class="gallery-item filter-item graphic">
+        <img src="images/auggy.png" alt="Swimming state championship graphic">
+        <h3>State Meet Graphic</h3>
+        <p>Sports graphic focused on achievement, recognition, and visual impact.</p>
+      </div>
+    </section>
+
+    <aside class="info-box">
+      <h2>What stands out in my work</h2>
+      <ol>
+        <li>Strong emotion and storytelling</li>
+        <li>Clean layouts and visual balance</li>
+        <li>Ability to combine photography and design</li>
+      </ol>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Oliver Zureick Photography | Portfolio Page</p>
+      <p><a href="contact.html">Go to Contact Page</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
