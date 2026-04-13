@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oliver Zureick Photography | Materialize</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f5f5f2;
+      color: #111;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    nav {
+      background-color: #1b4332;
+    }
+
+    .brand-logo {
+      padding-left: 15px;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 40px 0 20px 0;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .section-box {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      margin-top: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .accent-text {
+      color: #2d6a4f;
+    }
+
+    .card-image img {
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .circle-photo {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .custom-video {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .page-footer {
+      background-color: #1b4332;
+      margin-top: 40px;
+    }
+
+    .small-space {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo">Oliver Zureick</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="active"><a href="materialize.html">Materialize</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="row valign-wrapper">
+        <div class="col s12 m6">
+          <h2 class="accent-text">Photography in a clean, modern layout</h2>
+          <p>
+            This page uses Materialize to present photography in a simple and professional way. The goal is to keep the focus on the images while making the site easy to use and visually strong.
+          </p>
+          <p>
+            My work centers on sports, portraits, and creative visuals. This layout helps organize that work while still matching the style of the rest of my website.
+          </p>
+          <a class="waves-effect waves-light btn" href="portfolio.html">View Portfolio</a>
+        </div>
+
+        <div class="col s12 m6">
+          <img src="images/DSC04143.jpg" alt="Sports photography" class="responsive-img hero-img z-depth-2">
+        </div>
+      </div>
+    </section>
+
+    <section class="section-box center-align">
+      <h3 class="accent-text">Featured Image</h3>
+      <img src="images/DSC02163.jpg" alt="Basketball photography" class="circle responsive-img circle-photo">
+      <p class="small-space">
+        This circular image adds a different media style to the page and shows one of the Materialize media features.
+      </p>
+    </section>
+
+    <section class="section-box">
+      <h3 class="accent-text">Photography Focus</h3>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/DSC04069.jpg" alt="Portrait photography">
+            </div>
+            <div class="card-content">
+              <span class="card-title">Portraits</span>
+              <p>Simple and clean photography focused on strong composition.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/DSC02349.jpg" alt="Sports moment">
+            </div>
+            <div class="card-content">
+              <span class="card-title">Sports Moments</span>
+              <p>Images that capture energy, emotion, and important moments.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/DSC07231.jpg" alt="Training photography">
+            </div>
+            <div class="card-content">
+              <span class="card-title">Training</span>
+              <p>Photography that highlights effort, movement, and athletic detail.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-box">
+      <div class="row">
+        <div class="col s12 m8">
+          <h4 class="accent-text">Why this page works</h4>
+          <p>
+            This page keeps the site theme consistent while using a different web design tool. It is simple, organized, and centered around photography.
+          </p>
+        </div>
+
+        <div class="col s12 m4">
+          <h4 class="accent-text">Features Used</h4>
+          <ul class="browser-default">
+            <li>Materialize framework</li>
+            <li>Responsive grid layout</li>
+            <li>Circular image</li>
+            <li>Custom video</li>
+            <li>Custom color palette</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-box">
+      <h3 class="accent-text">Video Section</h3>
+      <p>
+        This section adds video to the page and helps create a more complete media experience alongside photography.
+      </p>
+
+      <video class="responsive-video custom-video" controls>
+        <source src="videos/alleyoop.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text">Oliver Zureick Photography</h5>
+          <p class="grey-text text-lighten-4">
+            Sports photography, portraits, and creative visual work.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2026 Oliver Zureick Photography
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
