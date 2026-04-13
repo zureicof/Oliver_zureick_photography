@@ -1,21 +1,37 @@
-document.getElementById("welcomeBtn").onclick = function () {
-  document.getElementById("welcomeMessage").innerHTML =
-    "Welcome to Oliver Zureick Photography. Check out my work on the portfolio page.";
-};
+const welcomeBtn = document.getElementById("welcomeBtn");
+const welcomeMessage = document.getElementById("welcomeMessage");
 
-document.getElementById("contactBtn").onclick = function () {
-  document.getElementById("contactMessage").innerHTML =
-    "I am available for sports photography, graphics, and event coverage.";
-};
+if (welcomeBtn && welcomeMessage) {
+  welcomeBtn.addEventListener("click", function () {
+    welcomeMessage.textContent =
+      "Welcome to my site. This is where I show my sports photography, creative work, and media projects.";
+  });
+}
+
+const contactBtn = document.getElementById("contactBtn");
+const contactMessage = document.getElementById("contactMessage");
+
+if (contactBtn && contactMessage) {
+  contactBtn.addEventListener("click", function () {
+    contactMessage.textContent =
+      "Booking is open for sports events, team content, athlete shoots, and creative design projects.";
+  });
+}
 
 function filterSelection(category) {
-  let items = document.getElementsByClassName("filter-item");
+  const items = document.getElementsByClassName("filter-item");
 
   for (let i = 0; i < items.length; i++) {
-    if (category === "all" || items[i].className.indexOf(category) > -1) {
-      items[i].style.display = "block";
-    } else {
-      items[i].style.display = "none";
+    items[i].classList.remove("show");
+
+    if (category === "all" || items[i].classList.contains(category)) {
+      items[i].classList.add("show");
     }
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelector(".filter-item")) {
+    filterSelection("all");
+  }
+});
