@@ -1,216 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oliver Zureick Photography | Materialize</title>
-
-  <!-- Materialize CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-  <!-- Google Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basketball Gallery</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #f5f5f2;
-      color: #111;
-      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 30px;
     }
 
-    nav {
-      background-color: #1b4332;
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
 
-    .brand-logo {
-      padding-left: 15px;
-      font-weight: bold;
+    .image-card {
+      background: white;
+      width: calc(25% - 20px);
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+      overflow: hidden;
     }
 
-    .hero {
-      padding: 40px 0 20px 0;
-    }
-
-    .hero-img {
+    .image-card img {
       width: 100%;
-      border-radius: 8px;
-    }
-
-    .section-box {
-      background-color: white;
-      padding: 25px;
-      border-radius: 10px;
-      margin-top: 25px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .accent-text {
-      color: #2d6a4f;
-    }
-
-    .card-image img {
-      height: 240px;
+      height: 320px;
       object-fit: cover;
+      display: block;
     }
 
-    .circle-photo {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
+    .image-card .text {
+      padding: 15px;
     }
 
-    .custom-video {
-      width: 100%;
-      border-radius: 8px;
-      margin-top: 15px;
+    .image-card .text h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
     }
 
-    .page-footer {
-      background-color: #1b4332;
-      margin-top: 40px;
+    .image-card .text p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #444;
     }
 
-    .small-space {
-      margin-top: 15px;
+    @media (max-width: 1060px) {
+      .image-card {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .image-card {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div class="nav-wrapper">
-      <a href="index.html" class="brand-logo">Oliver Zureick</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="active"><a href="materialize.html">Materialize</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main class="container">
-    <section class="hero">
-      <div class="row valign-wrapper">
-        <div class="col s12 m6">
-          <h2 class="accent-text">Photography in a clean, modern layout</h2>
-          <p>
-            This page uses Materialize to present photography in a simple and professional way. The goal is to keep the focus on the images while making the site easy to use and visually strong.
-          </p>
-          <p>
-            My work centers on sports, portraits, and creative visuals. This layout helps organize that work while still matching the style of the rest of my website.
-          </p>
-          <a class="waves-effect waves-light btn" href="portfolio.html">View Portfolio</a>
-        </div>
-
-        <div class="col s12 m6">
-          <img src="images/DSC04143.jpg" alt="Sports photography" class="responsive-img hero-img z-depth-2">
-        </div>
-      </div>
-    </section>
-
-    <section class="section-box center-align">
-      <h3 class="accent-text">Featured Image</h3>
-      <img src="images/DSC02163.jpg" alt="Basketball photography" class="circle responsive-img circle-photo">
-      <p class="small-space">
-        This circular image adds a different media style to the page and shows one of the Materialize media features.
-      </p>
-    </section>
-
-    <section class="section-box">
-      <h3 class="accent-text">Photography Focus</h3>
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/DSC04069.jpg" alt="Portrait photography">
-            </div>
-            <div class="card-content">
-              <span class="card-title">Portraits</span>
-              <p>Simple and clean photography focused on strong composition.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/DSC02349.jpg" alt="Sports moment">
-            </div>
-            <div class="card-content">
-              <span class="card-title">Sports Moments</span>
-              <p>Images that capture energy, emotion, and important moments.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/DSC07231.jpg" alt="Training photography">
-            </div>
-            <div class="card-content">
-              <span class="card-title">Training</span>
-              <p>Photography that highlights effort, movement, and athletic detail.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-box">
-      <div class="row">
-        <div class="col s12 m8">
-          <h4 class="accent-text">Why this page works</h4>
-          <p>
-            This page keeps the site theme consistent while using a different web design tool. It is simple, organized, and centered around photography.
-          </p>
-        </div>
-
-        <div class="col s12 m4">
-          <h4 class="accent-text">Features Used</h4>
-          <ul class="browser-default">
-            <li>Materialize framework</li>
-            <li>Responsive grid layout</li>
-            <li>Circular image</li>
-            <li>Custom video</li>
-            <li>Custom color palette</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-box">
-      <h3 class="accent-text">Video Section</h3>
-      <p>
-        This section adds video to the page and helps create a more complete media experience alongside photography.
-      </p>
-
-      <video class="responsive-video custom-video" controls>
-        <source src="videos/alleyoop.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </section>
-  </main>
-
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <h5 class="white-text">Oliver Zureick Photography</h5>
-          <p class="grey-text text-lighten-4">
-            Sports photography, portraits, and creative visual work.
-          </p>
-        </div>
+  <div class="image-gallery">
+    <div class="image-card">
+      <img src="12.png" alt="Basketball action shot 1">
+      <div class="text">
+        <h3>Action Shot 1</h3>
+        <p>Motion blur basketball image from the game.</p>
       </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-        © 2026 Oliver Zureick Photography
+
+    <div class="image-card">
+      <img src="ntitled-1.png" alt="Basketball action shot 2">
+      <div class="text">
+        <h3>Dunk Attempt 1</h3>
+        <p>Player rising toward the rim during warmups.</p>
       </div>
     </div>
-  </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <div class="image-card">
+      <img src="Untitled-1.png" alt="Basketball action shot 3">
+      <div class="text">
+        <h3>Dunk Attempt 2</h3>
+        <p>Low-angle shot of a player attacking the basket.</p>
+      </div>
+    </div>
+
+    <div class="image-card">
+      <img src="Untitled-3.png" alt="Basketball action shot 4">
+      <div class="text">
+        <h3>Dunk Attempt 3</h3>
+        <p>Another strong warmup finish near the rim.</p>
+      </div>
+    </div>
+
+    <div class="image-card">
+      <img src="Untitled-4.png" alt="Basketball action shot 5">
+      <div class="text">
+        <h3>Dunk Attempt 4</h3>
+        <p>Player elevating with teammates in the background.</p>
+      </div>
+    </div>
+
+    <div class="image-card">
+      <img src="Untitled-5.png" alt="Basketball action shot 6">
+      <div class="text">
+        <h3>Dunk Attempt 5</h3>
+        <p>Close-up rim shot during pregame action.</p>
+      </div>
+    </div>
+
+    <div class="image-card">
+      <img src="Untitled-6.png" alt="Basketball action shot 7">
+      <div class="text">
+        <h3>Dunk Attempt 6</h3>
+        <p>Player floating through the air toward the hoop.</p>
+      </div>
+    </div>
+
+    <div class="image-card">
+      <img src="Untitled-7.png" alt="Basketball action shot 8">
+      <div class="text">
+        <h3>Dunk Attempt 7</h3>
+        <p>Another athletic finish captured from below.</p>
+      </div>
+    </div>
+
+    <div class="image-card">
+      <img src="Untitled-8.png" alt="Basketball action shot 9">
+      <div class="text">
+        <h3>Motion Shot 2</h3>
+        <p>Blurred action image showing speed and movement.</p>
+      </div>
+    </div>
+
+    <div class="image-card">
+      <img src="Untitled-9.png" alt="Basketball action shot 10">
+      <div class="text">
+        <h3>Motion Shot 3</h3>
+        <p>Fast-paced game moment with dramatic blur.</p>
+      </div>
+    </div>
+
+    <div class="image-card">
+      <img src="Untitled-10.png" alt="Basketball action shot 11">
+      <div class="text">
+        <h3>Motion Shot 4</h3>
+        <p>Player sprinting through the frame in motion.</p>
+      </div>
+    </div>
+
+    <div class="image-card">
+      <img src="Untitled-11.png" alt="Basketball action shot 12">
+      <div class="text">
+        <h3>Motion Shot 5</h3>
+        <p>Abstract basketball action with heavy motion blur.</p>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
