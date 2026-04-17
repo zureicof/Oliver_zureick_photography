@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oliver Zureick Photography | Home</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oliver Zureick | Home</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="container">
-      <h1>Oliver Zureick Photography</h1>
-      <p class="tagline">Sports storytelling through photography and design</p>
+      <h1>Oliver Zureick</h1>
+      <p class="tagline">Sports Photography • Creative Graphics • Visual Storytelling</p>
+
       <nav>
         <ul class="nav-list">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="materialize.html">Materialize</a></li>
         </ul>
       </nav>
     </div>
@@ -26,80 +26,88 @@
   <main class="container">
     <section class="hero">
       <div class="hero-text">
-        <h2>Capturing the energy, pressure, and emotion of sports</h2>
+        <p class="section-label">Featured Photographer</p>
+        <h2>Capturing sports with energy, emotion, and design.</h2>
         <p>
-          My name is Oliver Zureick, and I am a sports photographer and creative storyteller. I built this site to show my work in a way that feels bold, clean, and easy to follow. A lot of my content is based around sports because sports create moments that are intense, emotional, and real. My goal is to catch those moments in a way that feels strong and memorable.
+          I am a sports photographer and creative focused on making images that feel more than just basic game coverage.
+          My work is built around timing, angle, atmosphere, and storytelling. Whether I am shooting baseball, basketball,
+          or training content, I want every image to feel strong and intentional.
         </p>
         <p>
-          I also enjoy creating graphics and visual content that go beyond a normal picture. I want this site to show both sides of what I do. It introduces my style, highlights my portfolio, and gives people a place to reach out if they want to work with me.
+          This portfolio shows both photography and design work. Some pieces are clean action photos, while others are
+          built to feel more creative and graphic-driven. The goal is to create content that stands out for athletes,
+          teams, and social media.
         </p>
-        <button id="welcomeBtn">Click for Welcome Message</button>
-        <p id="welcomeMessage"></p>
-        <a href="gallery.html" class="btn">View Basketball Gallery</a>
+
+        <div class="button-row">
+          <a href="portfolio.html" class="btn">View Portfolio</a>
+          <button id="welcomeBtn">Quick Intro</button>
+        </div>
+        <p id="welcomeMessage" class="welcome-message"></p>
       </div>
 
       <aside class="sidebar">
-        <img src="images/DSC04143.jpg" alt="Baseball player during anthem">
+        <img src="DSC04391(1).png" alt="Baseball player throwing the ball" />
         <h3>Quick Facts</h3>
         <ul>
-          <li>Based in Oxford, Ohio</li>
-          <li>Sports photography and design focus</li>
-          <li>Available for teams, athletes, and events</li>
-          <li>Works in photo, graphics, and media content</li>
+          <li>Sports photographer and content creator</li>
+          <li>Works in game action, training, and graphics</li>
+          <li>Based around Ohio sports coverage</li>
+          <li>Focused on bold and professional visuals</li>
         </ul>
       </aside>
     </section>
 
     <section class="info-box">
-      <h2>Featured Work Areas</h2>
+      <h2>What I Shoot</h2>
       <table>
         <tr>
-          <th>Type of Work</th>
+          <th>Category</th>
           <th>Description</th>
         </tr>
         <tr>
-          <td>Sports Photography</td>
-          <td>Game action, emotional moments, and athlete storytelling</td>
+          <td>Game Action</td>
+          <td>Photos that focus on timing, movement, and peak moments.</td>
+        </tr>
+        <tr>
+          <td>Training</td>
+          <td>Weight room and workout content that highlights effort and strength.</td>
         </tr>
         <tr>
           <td>Creative Graphics</td>
-          <td>Schedule graphics, posters, and sports promotional visuals</td>
-        </tr>
-        <tr>
-          <td>Event Coverage</td>
-          <td>Team celebrations, school events, and big moments</td>
+          <td>Sports edits and promotional designs built for teams and athletes.</td>
         </tr>
       </table>
     </section>
 
     <section class="home-gallery">
-      <h2 class="section-title">Recent Images</h2>
+      <h2 class="section-title">Featured Work</h2>
       <div class="gallery">
-        <div class="gallery-item">
-          <img src="images/DSC04391.jpg" alt="Baseball player catching ball">
-          <h3>Game Action</h3>
-          <p>Fast moments captured with strong timing and clean framing.</p>
-        </div>
+        <article class="gallery-item">
+          <img src="DSC07231(1).png" alt="Athlete lifting a barbell" />
+          <h3>Training Focus</h3>
+          <p>Strength and performance photography built around intensity and clean framing.</p>
+        </article>
 
-        <div class="gallery-item">
-          <img src="images/DSC02163.jpg" alt="Basketball player shooting">
-          <h3>Basketball</h3>
-          <p>Images focused on intensity, movement, and atmosphere.</p>
-        </div>
+        <article class="gallery-item">
+          <img src="Opening Day (1).png" alt="Opening day baseball graphic" />
+          <h3>Graphic Design</h3>
+          <p>Creative sports graphics made for promotion, hype, and team identity.</p>
+        </article>
 
-        <div class="gallery-item">
-          <img src="images/DSC07231.jpg" alt="Weight room training">
-          <h3>Training</h3>
-          <p>Photos that show effort, power, and athletic identity.</p>
-        </div>
+        <article class="gallery-item">
+          <img src="2(1).png" alt="Basketball dunk warmup photo" />
+          <h3>Basketball Moments</h3>
+          <p>Action images focused on height, angle, and atmosphere around the rim.</p>
+        </article>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>Oliver Zureick Photography | Oxford, Ohio</p>
-      <p>Email: oliverzureick@gmail.com | Instagram: @oliverzureick</p>
+      <p>Oliver Zureick Portfolio</p>
+      <p>Email: oliverzureick@gmail.com</p>
     </div>
   </footer>
 

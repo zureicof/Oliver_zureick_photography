@@ -4,34 +4,25 @@ const welcomeMessage = document.getElementById("welcomeMessage");
 if (welcomeBtn && welcomeMessage) {
   welcomeBtn.addEventListener("click", function () {
     welcomeMessage.textContent =
-      "Welcome to my site. This is where I show my sports photography, creative work, and media projects.";
-  });
-}
-
-const contactBtn = document.getElementById("contactBtn");
-const contactMessage = document.getElementById("contactMessage");
-
-if (contactBtn && contactMessage) {
-  contactBtn.addEventListener("click", function () {
-    contactMessage.textContent =
-      "Booking is open for sports events, team content, athlete shoots, and creative design projects.";
+      "Welcome to my portfolio. This site highlights my sports photography, training content, and creative design work.";
   });
 }
 
 function filterSelection(category) {
   const items = document.getElementsByClassName("filter-item");
 
+  if (category === "all") {
+    category = "";
+  }
+
   for (let i = 0; i < items.length; i++) {
     items[i].classList.remove("show");
-
-    if (category === "all" || items[i].classList.contains(category)) {
+    if (items[i].className.indexOf(category) > -1) {
       items[i].classList.add("show");
     }
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (document.querySelector(".filter-item")) {
-    filterSelection("all");
-  }
-});
+if (document.getElementsByClassName("filter-item").length > 0) {
+  filterSelection("all");
+}
