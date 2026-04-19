@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oliver Zureick | Services</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Oliver Zureick</h1>
+      <p class="tagline">Sports Photography • Creative Services</p>
+
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="jquery.html" class="active">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="info-box">
+      <h2>Services</h2>
+      <p>
+        I offer sports photography, creative graphics, and content creation built for athletes, teams, and schools.
+        My goal is to create visuals that feel clean, strong, and ready for real use on social media or promotion.
+      </p>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery-item">
+        <img src="DSC04391(1).png" alt="Baseball photography">
+        <h3>Game Coverage</h3>
+        <p>Live sports photography capturing real moments and energy.</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="DSC07231(1).png" alt="Training photography">
+        <h3>Training Content</h3>
+        <p>Workout and performance images focused on intensity and detail.</p>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Opening Day (1).png" alt="Graphic design">
+        <h3>Graphic Design</h3>
+        <p>Posters, edits, and social media graphics built for teams.</p>
+      </div>
+    </section>
+
+    <section class="info-box">
+      <h2>More About My Work</h2>
+      <button id="hideBtn" class="btn">Show / Hide Details</button>
+
+      <div id="box" class="service-box">
+        <p>
+          I enjoy creating content that helps teams and athletes look more professional online.
+          That can include live game coverage, media day photos, practice content, or custom sports graphics.
+        </p>
+        <p>
+          My focus is not just taking pictures. I want the final work to feel useful, polished, and visually strong.
+        </p>
+      </div>
+    </section>
+
+    <section class="info-box">
+      <h2>Service Options</h2>
+      <button id="slideBtn" class="btn">Show / Hide Service List</button>
+
+      <ul id="serviceList" class="service-list">
+        <li>Game day photography</li>
+        <li>Athlete portraits</li>
+        <li>Training and workout content</li>
+        <li>Social media graphics</li>
+        <li>Team promotional visuals</li>
+      </ul>
+    </section>
+
+    <section class="info-box">
+      <h2>Quick Contact Preview</h2>
+      <p>Type your name below to preview a message.</p>
+
+      <div class="form-row">
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button id="submitBtn" class="btn">Submit</button>
+      </div>
+
+      <p id="output" class="output-message"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>Oliver Zureick</h3>
+        <p>Sports photography, graphics, and athlete-focused content.</p>
+      </div>
+      <div>
+        <p><strong>Email:</strong> zureicof@miamioh.edu</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,28 +1,59 @@
-const welcomeBtn = document.getElementById("welcomeBtn");
-const welcomeMessage = document.getElementById("welcomeMessage");
+$(document).ready(function () {
+  // Add red heading style
+  $("h2").addClass("highlight");
 
-if (welcomeBtn && welcomeMessage) {
-  welcomeBtn.addEventListener("click", function () {
-    welcomeMessage.textContent =
-      "Welcome to my portfolio. This site highlights my sports photography, training content, and creative design work.";
+  // Home page intro
+  $("#welcomeBtn").click(function () {
+    $("#welcomeMessage").fadeToggle();
   });
-}
 
-function filterSelection(category) {
-  const items = document.getElementsByClassName("filter-item");
+  // Portfolio summary toggle
+  $("#hidePortfolioBtn").click(function () {
+    $("#portfolioSummary").toggle();
+  });
 
-  if (category === "all") {
-    category = "";
-  }
+  // Portfolio filtering
+  $(".filter-btn").click(function () {
+    const filter = $(this).attr("data-filter");
 
-  for (let i = 0; i < items.length; i++) {
-    items[i].classList.remove("show");
-    if (items[i].className.indexOf(category) > -1) {
-      items[i].classList.add("show");
+    if (filter === "all") {
+      $(".filter-item").hide().fadeIn(400);
+    } else {
+      $(".filter-item").hide();
+      $("." + filter).fadeIn(400);
     }
-  }
-}
+  });
 
-if (document.getElementsByClassName("filter-item").length > 0) {
-  filterSelection("all");
-}
+  // Services page interaction 1
+  $("#hideBtn").click(function () {
+    $("#box").toggle();
+  });
+
+  // Services page interaction 2
+  $("#slideBtn").click(function () {
+    $("#serviceList").slideToggle();
+  });
+
+  // Services page interaction 3
+  $("#submitBtn").click(function () {
+    const name = $("#nameInput").val();
+
+    if (name.trim() === "") {
+      $("#output").text("Please enter your name.");
+    } else {
+      $("#output").text(
+        "Thanks for reaching out, " +
+          name +
+          ". I would love to connect about your project."
+      );
+    }
+  });
+
+  // Materialize gallery images
+  if ($(".materialboxed").length) {
+    $(".materialboxed").materialbox();
+  }
+
+  // Keep intro visible when page loads
+  $("#welcomeMessage").show();
+});

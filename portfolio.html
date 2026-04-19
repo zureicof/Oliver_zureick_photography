@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oliver Zureick | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
@@ -17,6 +17,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html" class="active">Portfolio</a></li>
           <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="jquery.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -24,91 +25,99 @@
   </header>
 
   <main class="container">
-    <section class="info-box">
+    <section class="page-intro">
+      <div>
+        <p class="section-label">Selected Work</p>
+        <h2>Photography and design work built for sports storytelling.</h2>
+      </div>
+      <button id="hidePortfolioBtn" class="btn secondary-btn">Toggle Portfolio Summary</button>
+    </section>
+
+    <section id="portfolioSummary" class="info-box">
       <h2>Portfolio Overview</h2>
       <p>
-        This page highlights the type of work I create most often. My portfolio mixes traditional sports photography
-        with more creative visuals and design-based content. I like making work that looks polished, but still feels real.
+        My portfolio blends sports photography with visual design work. Some projects are focused on capturing
+        real-time action, while others are built to feel more graphic, promotional, and brand-driven.
       </p>
       <p>
-        The strongest part of my style is variety. I can cover live action, shoot dramatic training images,
-        and also create graphics that help athletes and teams build a stronger visual identity.
+        I try to keep the images clean and intentional while still bringing energy to the final result.
+        The goal is to create visuals that feel polished enough for a real client while still showing creative range.
       </p>
     </section>
 
-    <section class="info-box">
-      <h2>Filter the Portfolio</h2>
-      <button class="filter-btn" onclick="filterSelection('all')">Show All</button>
-      <button class="filter-btn" onclick="filterSelection('photo')">Photos</button>
-      <button class="filter-btn" onclick="filterSelection('graphic')">Graphics</button>
+    <section class="filter-bar">
+      <h2>Browse Work</h2>
+      <div class="button-row">
+        <button class="filter-btn" data-filter="all">Show All</button>
+        <button class="filter-btn" data-filter="photo">Photos</button>
+        <button class="filter-btn" data-filter="graphic">Graphics</button>
+      </div>
     </section>
 
     <section class="gallery">
       <article class="gallery-item filter-item photo">
-        <img src="DSC04391(1).png" alt="Baseball player throwing ball" />
+        <img src="DSC04391(1).png" alt="Baseball action photo">
         <h3>Baseball Action</h3>
-        <p>Game image built around focus, framing, and clean subject separation.</p>
+        <p>Focused sports coverage with cleaner composition and athlete emphasis.</p>
       </article>
 
       <article class="gallery-item filter-item photo">
-        <img src="DSC07207(1).png" alt="Athlete squatting in weight room" />
+        <img src="DSC07207(1).png" alt="Weight room squat photo">
         <h3>Weight Room Power</h3>
-        <p>Training content that shows pressure, effort, and strength.</p>
+        <p>Training content built around strength, pressure, and body positioning.</p>
       </article>
 
       <article class="gallery-item filter-item photo">
-        <img src="DSC07231(1).png" alt="Athlete front rack lifting" />
+        <img src="DSC07231(1).png" alt="Training image">
         <h3>Training Detail</h3>
-        <p>Performance image with strong lighting and a tighter athlete focus.</p>
+        <p>A sharper performance image with a more controlled and professional look.</p>
       </article>
 
       <article class="gallery-item filter-item photo">
-        <img src="DSC07253(1).png" alt="Bench press from above" />
+        <img src="DSC07253(1).png" alt="Bench press image">
         <h3>Bench Session</h3>
-        <p>A different angle that makes the scene feel more immersive and structured.</p>
+        <p>A stronger overhead perspective that adds variety to the training work.</p>
       </article>
 
       <article class="gallery-item filter-item graphic">
-        <img src="florida(2).png" alt="Florida baseball gameday graphic" />
+        <img src="florida(2).png" alt="Florida sports graphic">
         <h3>Florida Trip Graphic</h3>
-        <p>Travel and schedule style graphic designed to feel bold and promotional.</p>
+        <p>Promotional content combining bold typography, layering, and sports identity.</p>
       </article>
 
       <article class="gallery-item filter-item graphic">
-        <img src="Opening Day (1).png" alt="Opening day baseball poster" />
+        <img src="Opening Day (1).png" alt="Opening day poster">
         <h3>Opening Day Poster</h3>
-        <p>Clean baseball poster with layered players, typography, and branding.</p>
+        <p>Designed to feel sharp, branded, and ready for social media promotion.</p>
       </article>
 
       <article class="gallery-item filter-item photo">
-        <img src="3(1).png" alt="Basketball dunk under the rim" />
-        <h3>Above the Rim</h3>
-        <p>Low-angle basketball image built to show athleticism and height.</p>
+        <img src="3(1).png" alt="Basketball dunk photo">
+        <h3>Above The Rim</h3>
+        <p>Low-angle basketball coverage showing height, energy, and athleticism.</p>
       </article>
 
       <article class="gallery-item filter-item photo">
-        <img src="4(1).png" alt="Basketball dunk from under basket" />
+        <img src="4(1).png" alt="Basketball warmup finish">
         <h3>Warmup Finish</h3>
-        <p>Strong composition with the basket structure helping frame the athlete.</p>
+        <p>Strong structure and framing give this image a more polished sports look.</p>
       </article>
     </section>
-
-    <aside class="info-box">
-      <h2>What stands out in my work</h2>
-      <ol>
-        <li>Strong sports storytelling</li>
-        <li>Creative camera angles and movement</li>
-        <li>Ability to combine photography and design</li>
-      </ol>
-    </aside>
   </main>
 
   <footer>
-    <div class="container">
-      <p>Oliver Zureick Portfolio</p>
+    <div class="container footer-grid">
+      <div>
+        <h3>Oliver Zureick</h3>
+        <p>Photography and design built around sports media.</p>
+      </div>
+      <div>
+        <p><strong>Email:</strong> zureicof@miamioh.edu</p>
+      </div>
     </div>
   </footer>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

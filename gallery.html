@@ -4,87 +4,174 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oliver Zureick | Gallery</title>
+
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <h1>Oliver Zureick</h1>
-      <p class="tagline">Basketball Gallery and Creative Motion Work</p>
+      <p class="tagline">Basketball Gallery • Motion • Atmosphere</p>
 
-      <nav>
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="gallery.html" class="active">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <nav class="gallery-nav">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">OZ</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li class="active"><a href="gallery.html">Gallery</a></li>
+            <li><a href="jquery.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="info-box">
-      <h2>Basketball Gallery</h2>
-      <p>
-        This gallery is focused on basketball images that feel energetic and different from a normal sports photo.
-        Some images are sharp and clean, while others use motion blur to show movement and atmosphere.
-      </p>
-      <p>
-        I like mixing traditional action with more experimental work because it gives the portfolio more range.
-        The result is a gallery that shows both technical timing and creative style.
-      </p>
+  <main class="container materialize-gallery-page">
+    <section class="gallery-hero-panel">
+      <div class="row valign-wrapper">
+        <div class="col s12 m7">
+          <p class="section-label">Basketball Collection</p>
+          <h2>Images built around movement, timing, and atmosphere.</h2>
+          <p class="gallery-lead">
+            This gallery focuses on basketball work that feels more creative than normal game coverage.
+            Some images are clean and direct, while others use blur and motion to create more energy in the frame.
+          </p>
+          <p class="gallery-lead">
+            Click any image to expand it. The layout uses Materialize cards, responsive grid columns,
+            and materialboxed images to make the page feel cleaner and more polished.
+          </p>
+        </div>
+
+        <div class="col s12 m5">
+          <div class="gallery-side-panel">
+            <h3>Gallery Focus</h3>
+            <ul class="browser-default">
+              <li>Basketball warmups</li>
+              <li>Creative motion blur</li>
+              <li>Low-angle action</li>
+              <li>Atmosphere and rhythm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="gallery-grid">
-      <article class="gallery-card">
-        <img src="2(1).png" alt="Basketball dunk image 1" />
-        <h3>Warmup Dunk</h3>
-        <p>Low angle with strong size and elevation.</p>
-      </article>
+    <section class="gallery-material-grid">
+      <div class="row">
+        <div class="col s12 m6 l4">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="2(1).png" alt="Warmup dunk">
+            </div>
+            <div class="card-content">
+              <span class="card-title">Warmup Dunk</span>
+              <p>Low-angle framing creates a bigger and more dramatic moment.</p>
+            </div>
+          </div>
+        </div>
 
-      <article class="gallery-card">
-        <img src="3(1).png" alt="Basketball dunk image 2" />
-        <h3>Attack The Rim</h3>
-        <p>Clean upward framing and strong body positioning.</p>
-      </article>
+        <div class="col s12 m6 l4">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="3(1).png" alt="Attack the rim">
+            </div>
+            <div class="card-content">
+              <span class="card-title">Attack The Rim</span>
+              <p>Focused on elevation, body position, and cleaner upward composition.</p>
+            </div>
+          </div>
+        </div>
 
-      <article class="gallery-card">
-        <img src="4(1).png" alt="Basketball dunk image 3" />
-        <h3>Pregame Energy</h3>
-        <p>Built around atmosphere and height before the game starts.</p>
-      </article>
+        <div class="col s12 m6 l4">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="4(1).png" alt="Pregame basketball energy">
+            </div>
+            <div class="card-content">
+              <span class="card-title">Pregame Energy</span>
+              <p>Built around atmosphere and the feeling before the game begins.</p>
+            </div>
+          </div>
+        </div>
 
-      <article class="gallery-card">
-        <img src="9(1).png" alt="Motion blur basketball image 1" />
-        <h3>Creative Motion</h3>
-        <p>Blur used to make the scene feel fast and abstract.</p>
-      </article>
+        <div class="col s12 m6 l4">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="9(1).png" alt="Creative motion basketball image">
+            </div>
+            <div class="card-content">
+              <span class="card-title">Creative Motion</span>
+              <p>Blur helps the image feel faster and more expressive.</p>
+            </div>
+          </div>
+        </div>
 
-      <article class="gallery-card">
-        <img src="10(1).png" alt="Motion blur basketball image 2" />
-        <h3>Jump Shot Blur</h3>
-        <p>Movement and light trails give the image more energy.</p>
-      </article>
+        <div class="col s12 m6 l4">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="10(1).png" alt="Jump shot blur">
+            </div>
+            <div class="card-content">
+              <span class="card-title">Jump Shot Blur</span>
+              <p>Movement and light trails create a more artistic sports visual.</p>
+            </div>
+          </div>
+        </div>
 
-      <article class="gallery-card">
-        <img src="11(1).png" alt="Motion blur basketball image 3" />
-        <h3>Fast Break Feel</h3>
-        <p>Loose motion effect focused on speed and momentum.</p>
-      </article>
+        <div class="col s12 m6 l4">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="11(1).png" alt="Fast break blur">
+            </div>
+            <div class="card-content">
+              <span class="card-title">Fast Break Feel</span>
+              <p>Made to capture motion and direction rather than just a frozen moment.</p>
+            </div>
+          </div>
+        </div>
 
-      <article class="gallery-card">
-        <img src="12(2).png" alt="Motion blur basketball image 4" />
-        <h3>Full Court Motion</h3>
-        <p>Abstract basketball image built around flow and rhythm.</p>
-      </article>
+        <div class="col s12 m6 l4">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="12(2).png" alt="Full court motion image">
+            </div>
+            <div class="card-content">
+              <span class="card-title">Full Court Motion</span>
+              <p>A more abstract basketball image focused on rhythm and movement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>Oliver Zureick Basketball Gallery</p>
+    <div class="container footer-grid">
+      <div>
+        <h3>Oliver Zureick</h3>
+        <p>Sports photography and creative visual storytelling.</p>
+      </div>
+      <div>
+        <p><strong>Email:</strong> zureicof@miamioh.edu</p>
+      </div>
     </div>
   </footer>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Your site JS -->
+  <script src="script.js"></script>
 </body>
 </html>
