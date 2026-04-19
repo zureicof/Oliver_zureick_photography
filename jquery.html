@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oliver Zureick | Services</title>
-  <link rel="stylesheet" href="styles.css">
-
+  <meta name="description" content="Services, web interactions, and creative offerings by Oliver Zureick." />
+  <link rel="stylesheet" href="styles.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1>Oliver Zureick</h1>
-      <p class="tagline">Sports Photography • Creative Services</p>
+    <div class="container header-inner">
+      <div class="brand-block">
+        <h1>Oliver Zureick</h1>
+        <p class="tagline">Sports Photography • Creative Services</p>
+      </div>
 
       <nav>
         <ul class="nav-list">
@@ -26,82 +28,93 @@
     </div>
   </header>
 
-  <main class="container">
-    <section class="info-box">
-      <h2>Services</h2>
-      <p>
-        I offer sports photography, creative graphics, and content creation built for athletes, teams, and schools.
-        My goal is to create visuals that feel clean, strong, and ready for real use on social media or promotion.
-      </p>
-    </section>
-
-    <section class="gallery">
-      <div class="gallery-item">
-        <img src="DSC04391(1).png" alt="Baseball photography">
-        <h3>Game Coverage</h3>
-        <p>Live sports photography capturing real moments and energy.</p>
-      </div>
-
-      <div class="gallery-item">
-        <img src="DSC07231(1).png" alt="Training photography">
-        <h3>Training Content</h3>
-        <p>Workout and performance images focused on intensity and detail.</p>
-      </div>
-
-      <div class="gallery-item">
-        <img src="Opening Day (1).png" alt="Graphic design">
-        <h3>Graphic Design</h3>
-        <p>Posters, edits, and social media graphics built for teams.</p>
-      </div>
-    </section>
-
-    <section class="info-box">
-      <h2>More About My Work</h2>
-      <button id="hideBtn" class="btn">Show / Hide Details</button>
-
-      <div id="box" class="service-box">
+  <main class="page-main">
+    <section class="container">
+      <div class="panel-box">
+        <p class="section-label">Services</p>
+        <h2>Creative work and interactive web features</h2>
         <p>
-          I enjoy creating content that helps teams and athletes look more professional online.
-          That can include live game coverage, media day photos, practice content, or custom sports graphics.
-        </p>
-        <p>
-          My focus is not just taking pictures. I want the final work to feel useful, polished, and visually strong.
+          This page combines the services I offer with interactive elements built using jQuery.
+          It demonstrates web functionality while still fitting naturally into the overall portfolio.
         </p>
       </div>
-    </section>
 
-    <section class="info-box">
-      <h2>Service Options</h2>
-      <button id="slideBtn" class="btn">Show / Hide Service List</button>
+      <section class="cards-three service-preview-grid">
+        <article class="info-card">
+          <img src="19.png" alt="Game coverage photography" class="service-image" />
+          <h3>Game Coverage</h3>
+          <p>Live sports photography capturing real moments, movement, and atmosphere.</p>
+        </article>
 
-      <ul id="serviceList" class="service-list">
-        <li>Game day photography</li>
-        <li>Athlete portraits</li>
-        <li>Training and workout content</li>
-        <li>Social media graphics</li>
-        <li>Team promotional visuals</li>
-      </ul>
-    </section>
+        <article class="info-card">
+          <img src="10.png" alt="Training content photography" class="service-image" />
+          <h3>Training Content</h3>
+          <p>Workout and performance visuals focused on effort, form, and intensity.</p>
+        </article>
 
-    <section class="info-box">
-      <h2>Quick Contact Preview</h2>
-      <p>Type your name below to preview a message.</p>
+        <article class="info-card">
+          <img src="14.png" alt="Graphic design example" class="service-image" />
+          <h3>Graphic Design</h3>
+          <p>Posters, promotional designs, and social media visuals for teams and athletes.</p>
+        </article>
+      </section>
 
-      <div class="form-row">
-        <input type="text" id="nameInput" placeholder="Enter your name">
-        <button id="submitBtn" class="btn">Submit</button>
-      </div>
+      <section class="interactive-grid">
+        <div class="panel-box">
+          <h2>More About My Work</h2>
+          <p>
+            Use the button below to show or hide extra information about the type of content I create.
+          </p>
+          <button id="hideBtn" class="btn">Show / Hide Details</button>
 
-      <p id="output" class="output-message"></p>
+          <div id="box" class="interactive-box">
+            <p>
+              I enjoy creating content that helps athletes, schools, and teams look more professional online.
+              That can include game-day coverage, athlete portraits, practice content, and custom sports graphics.
+            </p>
+          </div>
+        </div>
+
+        <div class="panel-box">
+          <h2>Service Options</h2>
+          <p>
+            This list can slide open and closed to show a second jQuery interaction.
+          </p>
+          <button id="slideBtn" class="btn">Show / Hide Service List</button>
+
+          <ul id="serviceList" class="service-list">
+            <li>Game day photography</li>
+            <li>Athlete portraits</li>
+            <li>Training and workout content</li>
+            <li>Team promotional visuals</li>
+            <li>Creative sports design</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel-box">
+        <h2>Quick Contact Preview</h2>
+        <p>
+          Enter your name below to preview a simple response using jQuery.
+        </p>
+
+        <div class="form-row">
+          <input type="text" id="nameInput" placeholder="Enter your name" />
+          <button id="submitBtn" class="btn">Submit</button>
+        </div>
+
+        <p id="output" class="output-message"></p>
+      </section>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container footer-grid">
       <div>
         <h3>Oliver Zureick</h3>
         <p>Sports photography, graphics, and athlete-focused content.</p>
       </div>
+
       <div>
         <p><strong>Email:</strong> zureicof@miamioh.edu</p>
       </div>
