@@ -1,60 +1,18 @@
-$(document).ready(function () {
-  $("h2").addClass("highlight");
+document.addEventListener("DOMContentLoaded", () => {
 
-  if ($("#welcomeBtn").length) {
-    $("#welcomeBtn").click(function () {
-      $("#welcomeMessage").fadeToggle();
+  const images = document.querySelectorAll(".grid img, .masonry img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
     });
-  }
+  });
 
-  if ($("#hidePortfolioBtn").length) {
-    $("#hidePortfolioBtn").click(function () {
-      $("#portfolioSummary").toggle();
-    });
-  }
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
 
-  if ($(".filter-btn").length) {
-    $(".filter-btn").click(function () {
-      const filter = $(this).attr("data-filter");
-
-      if (filter === "all") {
-        $(".filter-item").hide().fadeIn(400);
-      } else {
-        $(".filter-item").hide();
-        $("." + filter).fadeIn(400);
-      }
-    });
-  }
-
-  if ($("#hideBtn").length) {
-    $("#hideBtn").click(function () {
-      $("#box").toggle();
-    });
-  }
-
-  if ($("#slideBtn").length) {
-    $("#slideBtn").click(function () {
-      $("#serviceList").slideToggle();
-    });
-  }
-
-  if ($("#submitBtn").length) {
-    $("#submitBtn").click(function () {
-      const name = $("#nameInput").val();
-
-      if (name.trim() === "") {
-        $("#output").text("Please enter your name.");
-      } else {
-        $("#output").text(
-          "Thanks for reaching out, " +
-            name +
-            ". I would love to connect about your project."
-        );
-      }
-    });
-  }
-
-  if ($("#welcomeMessage").length) {
-    $("#welcomeMessage").show();
-  }
 });

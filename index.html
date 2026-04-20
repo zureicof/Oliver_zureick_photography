@@ -1,150 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oliver Zureick | Sports Media Portfolio</title>
-  <meta name="description" content="Sports photography, visual storytelling, and creative media work by Oliver Zureick." />
-  <link rel="stylesheet" href="styles.css" />
+<title>Oliver Zureick</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand-block">
-        <h1>Oliver Zureick</h1>
-        <p class="tagline">Sports Photography • Creative Media • Visual Storytelling</p>
-      </div>
 
-      <nav>
-        <ul class="nav-list">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="jquery.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+  <h1>Oliver Zureick</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Work</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero-section">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="section-label">Sports Creative Portfolio</p>
-          <h2>Creating sports content built around energy, emotion, and real moments.</h2>
-          <p>
-            I am a sports media student and creative focused on building strong visuals through photography,
-            design, and storytelling. My work is centered on capturing moments that feel sharp, emotional,
-            and memorable, whether that is live game action, athlete-focused content, or promotional design.
-          </p>
-          <p>
-            This site is designed to showcase both my creative style and my ability to present work in a clean,
-            professional way. It highlights game coverage, training visuals, creative edits, and interactive web work
-            through a layout that feels polished and easy to navigate.
-          </p>
+<section class="hero">
+  <img src="22.png">
+  <div class="hero-text">
+    <h2>Sports content built for real moments.</h2>
+    <a href="portfolio.html" class="btn">View Work</a>
+  </div>
+</section>
 
-          <div class="button-row">
-            <a href="portfolio.html" class="btn">View Portfolio</a>
-            <button id="welcomeBtn" class="btn btn-secondary">Toggle Intro Message</button>
-          </div>
+<section class="featured">
+  <img src="24.png">
+  <div>
+    <h2>Creative + Game Coverage</h2>
+    <p>Blending live action with high-impact sports design.</p>
+  </div>
+</section>
 
-          <p id="welcomeMessage" class="welcome-message">
-            Welcome to my portfolio. This site brings together sports photography, media design, and creative digital work in one professional space.
-          </p>
-        </div>
+<section class="instagram">
+  <h2>More Work</h2>
+  <a href="https://www.instagram.com/oliver_zureick_creative" target="_blank">
+    @oliver_zureick_creative
+  </a>
+</section>
 
-        <aside class="hero-side">
-          <img src="18.png" alt="Sports photo by Oliver Zureick" />
-          <div class="side-card">
-            <h3>Quick Profile</h3>
-            <ul>
-              <li>Miami University student</li>
-              <li>Class of 2029</li>
-              <li>Cincinnati, Ohio</li>
-              <li>Sports photography and media focus</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img">
+</div>
 
-    <section class="highlights-section">
-      <div class="container cards-three">
-        <article class="info-card">
-          <h3>Game Coverage</h3>
-          <p>
-            Photography centered on timing, movement, and emotion during real competition.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Creative Design</h3>
-          <p>
-            Sports graphics and promotional visuals built for teams, athletes, and social media.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Training Content</h3>
-          <p>
-            Strong visual content that highlights intensity, effort, and athlete identity.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="featured-section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-label">Featured Work</p>
-          <h2>Selected images and design work</h2>
-        </div>
-
-        <div class="portfolio-grid">
-          <article class="portfolio-card">
-            <img src="11.png" alt="Training content" />
-            <div class="card-body">
-              <h3>Performance Training</h3>
-              <p>Visuals built around strength, form, and controlled sports storytelling.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-card">
-            <img src="14.png" alt="Sports design graphic" />
-            <div class="card-body">
-              <h3>Promotional Design</h3>
-              <p>Creative sports graphics combining branding, typography, and layered imagery.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-card">
-            <img src="1.png" alt="Basketball action image" />
-            <div class="card-body">
-              <h3>Live Coverage</h3>
-              <p>Action-focused work centered on pressure, motion, and real moments.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3>Oliver Zureick</h3>
-        <p>Sports photography, creative media, and visual storytelling.</p>
-      </div>
-
-      <div>
-        <p><strong>Email:</strong> zureicof@miamioh.edu</p>
-        <p><strong>School:</strong> Miami University</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
