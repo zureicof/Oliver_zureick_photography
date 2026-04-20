@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oliver Zureick | Services</title>
-  <meta name="description" content="Services, web interactions, and creative offerings by Oliver Zureick." />
+  <meta
+    name="description"
+    content="Creative services and interactive web features by Oliver Zureick."
+  />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -16,7 +19,7 @@
         <p class="tagline">Sports Photography • Creative Services</p>
       </div>
 
-      <nav>
+      <nav class="site-nav">
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
@@ -34,66 +37,63 @@
         <p class="section-label">Services</p>
         <h2>Creative work and interactive web features</h2>
         <p>
-          This page combines the services I offer with interactive elements built using jQuery.
-          It demonstrates web functionality while still fitting naturally into the overall portfolio.
+          This page combines the services I offer with the required jQuery interactions.
+          The goal is to keep the page functional while still making it feel like part of the portfolio.
         </p>
       </div>
 
       <section class="cards-three service-preview-grid">
         <article class="info-card">
-          <img src="19.png" alt="Game coverage photography" class="service-image" />
+          <img src="22.jpeg" alt="Baseball coverage" class="service-image" />
           <h3>Game Coverage</h3>
-          <p>Live sports photography capturing real moments, movement, and atmosphere.</p>
+          <p>Live sports photography capturing real moments, action, and atmosphere.</p>
         </article>
 
         <article class="info-card">
-          <img src="10.png" alt="Training content photography" class="service-image" />
-          <h3>Training Content</h3>
-          <p>Workout and performance visuals focused on effort, form, and intensity.</p>
+          <img src="24.jpeg" alt="Creative graphic work" class="service-image" />
+          <h3>Creative Design</h3>
+          <p>Promotional graphics and visual content built for athletes and teams.</p>
         </article>
 
         <article class="info-card">
-          <img src="14.png" alt="Graphic design example" class="service-image" />
-          <h3>Graphic Design</h3>
-          <p>Posters, promotional designs, and social media visuals for teams and athletes.</p>
+          <img src="27.jpg" alt="Championship storytelling image" class="service-image" />
+          <h3>Storytelling Content</h3>
+          <p>Coverage focused on emotion, identity, and the moments around the result.</p>
         </article>
       </section>
 
       <section class="interactive-grid">
         <div class="panel-box">
           <h2>More About My Work</h2>
-          </p>
+          <p>Use the button below to show or hide extra information.</p>
           <button id="hideBtn" class="btn">Show / Hide Details</button>
 
           <div id="box" class="interactive-box">
             <p>
-              I enjoy creating content that helps athletes, schools, and teams look more professional online.
-              That can include game-day coverage, athlete portraits, practice content, and custom sports graphics.
+              I create sports content for social media, school athletics, athlete branding,
+              and event coverage. That includes live action, portraits, graphics, and documentary-style storytelling.
             </p>
           </div>
         </div>
 
         <div class="panel-box">
           <h2>Service Options</h2>
-          <p>
-          </p>
+          <p>This section uses another jQuery interaction to slide the list open and closed.</p>
           <button id="slideBtn" class="btn">Show / Hide Service List</button>
 
           <ul id="serviceList" class="service-list">
             <li>Game day photography</li>
             <li>Athlete portraits</li>
-            <li>Training and workout content</li>
-            <li>Team promotional visuals</li>
-            <li>Creative sports design</li>
+            <li>Creative sports graphics</li>
+            <li>Championship and event coverage</li>
+            <li>Social media content</li>
           </ul>
         </div>
       </section>
 
       <section class="panel-box">
         <h2>Quick Contact Preview</h2>
-        <p>
-          Enter your name below to connect. 
-        </p>
+        <p>Enter your name below to preview a simple response using jQuery.</p>
 
         <div class="form-row">
           <input type="text" id="nameInput" placeholder="Enter your name" />

@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oliver Zureick | Portfolio</title>
-  <meta name="description" content="Photography, design, and sports media work by Oliver Zureick." />
+  <meta
+    name="description"
+    content="Photography, design, and sports media work by Oliver Zureick."
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -28,183 +31,144 @@
   </header>
 
   <main class="page-main">
-    <section class="portfolio-hero">
-      <div class="container portfolio-hero-grid">
-        <div class="portfolio-hero-copy">
+    <section class="page-top">
+      <div class="container page-top-inner">
+        <div>
           <p class="section-label">Selected Work</p>
-          <h2>A mix of live sports coverage, design, and images built around identity.</h2>
-          <p>
-            I want this portfolio to show range without losing consistency. Some projects are straightforward and built
-            around clean coverage. Others lean more creative through layering, motion, or stronger graphic design.
-            What connects all of them is the same goal: make the work feel polished, memorable, and useful.
+          <h2>Photography and design built around sports storytelling.</h2>
+          <p class="page-intro-text">
+            This page brings together different parts of my work, from live sports coverage
+            and detail-oriented photography to graphics built for promotion and athlete identity.
           </p>
         </div>
 
-        <div class="portfolio-hero-image">
-          <img src="24.png" alt="Football commitment graphic" />
-        </div>
+        <button id="hidePortfolioBtn" class="btn btn-secondary">Toggle Summary</button>
       </div>
     </section>
 
     <section class="container">
-      <div id="portfolioSummary" class="panel-box summary-panel">
-        <div class="summary-header">
-          <div>
-            <p class="section-label">Portfolio Summary</p>
-            <h2>Work organized by strength, not just category</h2>
-          </div>
-          <button id="hidePortfolioBtn" class="btn btn-secondary">Toggle Summary</button>
-        </div>
-
+      <div id="portfolioSummary" class="panel-box">
+        <h2>Portfolio Overview</h2>
         <p>
-          The strongest part of my portfolio is variety with a clear style behind it. I can cover live moments,
-          build promotional pieces, and create visuals that feel stronger than standard event documentation.
+          My portfolio is built around range. I want to be able to show strong live-action work,
+          more creative visual storytelling, and design pieces that can actually be used by teams,
+          athletes, and media outlets.
+        </p>
+        <p>
+          The goal is not just to show that I can take pictures. It’s to show that I can build
+          a body of work that feels professional, consistent, and useful in real sports media settings.
         </p>
       </div>
 
-      <section class="portfolio-section">
-        <div class="section-heading">
-          <p class="section-label">Featured Project</p>
-          <h2>Design work with stronger visual impact</h2>
+      <div class="filter-bar">
+        <div>
+          <p class="section-label">Browse Work</p>
+          <h2>Filter by category</h2>
         </div>
 
-        <div class="featured-project-grid">
-          <article class="featured-project-main">
-            <img src="24.png" alt="Football committed graphic" />
-          </article>
+        <div class="button-row">
+          <button class="filter-btn" data-filter="all">Show All</button>
+          <button class="filter-btn" data-filter="photo">Photos</button>
+          <button class="filter-btn" data-filter="graphic">Graphics</button>
+        </div>
+      </div>
 
-          <div class="featured-project-side">
-            <div class="mini-project-card">
-              <img src="15.png" alt="Basketball gameday poster" />
-              <div class="card-body">
-                <h3>Basketball Poster</h3>
-                <p>Promotional design built around scale, color, and visual hierarchy.</p>
-              </div>
-            </div>
-
-            <div class="mini-project-card">
-              <img src="16.png" alt="Opening day baseball poster" />
-              <div class="card-body">
-                <h3>Opening Day Graphic</h3>
-                <p>Baseball-focused design combining branding, typography, and athlete cutouts.</p>
-              </div>
-            </div>
+      <section class="portfolio-grid portfolio-grid-large">
+        <article class="portfolio-card portfolio-card-feature filter-item photo">
+          <img src="22.jpeg" alt="Pitcher throwing from the mound" />
+          <div class="card-body">
+            <h3>Baseball Action</h3>
+            <p>Sports coverage focused on mechanics, timing, and stronger in-game composition.</p>
           </div>
-        </div>
-      </section>
+        </article>
 
-      <section class="portfolio-section">
-        <div class="section-heading">
-          <p class="section-label">Game Coverage</p>
-          <h2>Baseball and basketball moments</h2>
-        </div>
+        <article class="portfolio-card filter-item photo">
+          <img src="21.jpeg" alt="Miami baseball player walking on the field" />
+          <div class="card-body">
+            <h3>Pregame Detail</h3>
+            <p>A cleaner lifestyle-style sports image that adds more personality to the portfolio.</p>
+          </div>
+        </article>
 
-        <div class="portfolio-grid portfolio-grid-large">
-          <article class="portfolio-card">
-            <img src="21.png" alt="Miami baseball player fielding" />
-            <div class="card-body">
-              <h3>Field Presence</h3>
-              <p>Clean framing and body language that let the image breathe.</p>
-            </div>
-          </article>
+        <article class="portfolio-card filter-item photo">
+          <img src="23.jpeg" alt="Miami baseball hitter waiting on a pitch" />
+          <div class="card-body">
+            <h3>At The Plate</h3>
+            <p>Built around anticipation, spacing, and the tension before contact.</p>
+          </div>
+        </article>
 
-          <article class="portfolio-card">
-            <img src="22.png" alt="Pitcher on the mound" />
-            <div class="card-body">
-              <h3>Pitching Action</h3>
-              <p>Strong timing and posture captured at the point of maximum tension.</p>
-            </div>
-          </article>
+        <article class="portfolio-card filter-item graphic">
+          <img src="24.jpeg" alt="Football commitment graphic" />
+          <div class="card-body">
+            <h3>Commitment Graphic</h3>
+            <p>Creative design work mixing athlete cutouts, typography, and stronger visual energy.</p>
+          </div>
+        </article>
 
-          <article class="portfolio-card">
-            <img src="23.png" alt="Batter at the plate" />
-            <div class="card-body">
-              <h3>At The Plate</h3>
-              <p>Game coverage with more focus on anticipation and the environment around the player.</p>
-            </div>
-          </article>
+        <article class="portfolio-card filter-item photo">
+          <img src="27.jpg" alt="Swim team holding state championship trophy" />
+          <div class="card-body">
+            <h3>Team Championship</h3>
+            <p>Emotion-driven coverage centered on achievement and team identity.</p>
+          </div>
+        </article>
 
-          <article class="portfolio-card">
-            <img src="8.png" alt="Basketball player helping teammate up" />
-            <div class="card-body">
-              <h3>Real Emotion</h3>
-              <p>An image built around connection and the kind of moment people remember later.</p>
-            </div>
-          </article>
+        <article class="portfolio-card filter-item photo">
+          <img src="28.jpeg" alt="Swimmer on medal stand" />
+          <div class="card-body">
+            <h3>Podium Moment</h3>
+            <p>More documentary-style storytelling in a high-pressure championship environment.</p>
+          </div>
+        </article>
 
-          <article class="portfolio-card">
-            <img src="12.png" alt="Basketball bench side action" />
-            <div class="card-body">
-              <h3>Bench-Side Action</h3>
-              <p>Coverage that shows not just the game, but the reactions and pressure around it.</p>
-            </div>
-          </article>
+        <article class="portfolio-card filter-item photo">
+          <img src="26.jpg" alt="Swimmer on starting block" />
+          <div class="card-body">
+            <h3>Ready To Go</h3>
+            <p>Focused on preparation, intensity, and pre-race tension.</p>
+          </div>
+        </article>
 
-          <article class="portfolio-card">
-            <img src="13.png" alt="Basketball creative graphic" />
-            <div class="card-body">
-              <h3>Creative Basketball Edit</h3>
-              <p>A hybrid piece that sits between photography and design.</p>
-            </div>
-          </article>
-        </div>
-      </section>
+        <article class="portfolio-card filter-item photo">
+          <img src="29.jpeg" alt="Swimmer portrait after race" />
+          <div class="card-body">
+            <h3>Post-Race Portrait</h3>
+            <p>A tighter, more personal sports image that adds range beyond the action itself.</p>
+          </div>
+        </article>
 
-      <section class="portfolio-section">
-        <div class="section-heading">
-          <p class="section-label">Swimming & Team Storytelling</p>
-          <h2>Work that adds identity beyond the action itself</h2>
-        </div>
+        <article class="portfolio-card filter-item photo">
+          <img src="30.jpeg" alt="Swimmers celebrating with medals" />
+          <div class="card-body">
+            <h3>Celebration</h3>
+            <p>Built around personality, confidence, and the energy after a big result.</p>
+          </div>
+        </article>
 
-        <div class="portfolio-grid portfolio-grid-large">
-          <article class="portfolio-card">
-            <img src="25.jpg" alt="Swim team championship trophy" />
-            <div class="card-body">
-              <h3>Championship Team Shot</h3>
-              <p>Celebration coverage that shows pride, scale, and team identity.</p>
-            </div>
-          </article>
+        <article class="portfolio-card filter-item photo">
+          <img src="25.jpeg" alt="Black and white close-up tattoo detail" />
+          <div class="card-body">
+            <h3>Detail Shot</h3>
+            <p>A more artistic detail image that helps the portfolio feel less one-dimensional.</p>
+          </div>
+        </article>
 
-          <article class="portfolio-card">
-            <img src="26.jpg" alt="Swim award podium" />
-            <div class="card-body">
-              <h3>Meet Atmosphere</h3>
-              <p>Images that use the venue itself to tell the story of the moment.</p>
-            </div>
-          </article>
+        <article class="portfolio-card filter-item graphic">
+          <img src="14.png" alt="Basketball gameday graphic" />
+          <div class="card-body">
+            <h3>Basketball Graphic</h3>
+            <p>Promotional design built for attention, branding, and social media use.</p>
+          </div>
+        </article>
 
-          <article class="portfolio-card">
-            <img src="27.jpg" alt="Black and white close detail portrait" />
-            <div class="card-body">
-              <h3>Detail Portrait</h3>
-              <p>Tighter, more personal work that adds range to the portfolio.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-card">
-            <img src="28.jpg" alt="Swimmer on the starting block" />
-            <div class="card-body">
-              <h3>Before The Start</h3>
-              <p>Pre-race visuals focused on focus, nerves, and body position.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-card">
-            <img src="29.jpg" alt="Swimmer backstage portrait" />
-            <div class="card-body">
-              <h3>Backstage Moment</h3>
-              <p>Not every strong image comes in the race. Sometimes the best ones happen around it.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-card">
-            <img src="30.jpg" alt="Swimmers posing with medals" />
-            <div class="card-body">
-              <h3>Personality & Presence</h3>
-              <p>Work that shows athletes as people, not just competitors.</p>
-            </div>
-          </article>
-        </div>
+        <article class="portfolio-card filter-item graphic">
+          <img src="17.png" alt="Swimming recognition graphic" />
+          <div class="card-body">
+            <h3>Recognition Graphic</h3>
+            <p>Achievement-based design built for school pride, recognition, and impact.</p>
+          </div>
+        </article>
       </section>
     </section>
   </main>

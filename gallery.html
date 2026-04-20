@@ -1,32 +1,206 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Gallery</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oliver Zureick | Gallery</title>
+  <meta
+    name="description"
+    content="Baseball, basketball, swimming, and creative sports visuals by Oliver Zureick."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Materialize CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  />
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-block">
+        <h1>Oliver Zureick</h1>
+        <p class="tagline">Gallery • Action • Detail • Storytelling</p>
+      </div>
 
-<header><h1>Gallery</h1></header>
+      <nav class="site-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="jquery.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section class="masonry">
+  <main class="page-main">
+    <section class="gallery-hero">
+      <div class="container gallery-hero-grid">
+        <div class="gallery-hero-copy">
+          <p class="section-label">Full Gallery</p>
+          <h2>A wider look at the work.</h2>
+          <p>
+            This gallery is built to show range across sports, styles, and moments.
+            It mixes game action, storytelling frames, creative edits, and detail shots
+            in a tighter layout that feels more like a real portfolio.
+          </p>
+        </div>
 
-<img src="2.png"><img src="3.png"><img src="4.png">
-<img src="5.png"><img src="6.png"><img src="7.png"><img src="8.png">
+        <aside class="gallery-side-card">
+          <h3>What’s Included</h3>
+          <ul>
+            <li>Baseball coverage</li>
+            <li>Basketball action</li>
+            <li>Swimming championship moments</li>
+            <li>Creative edits and graphics</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-<img src="25.jpg"><img src="26.jpg"><img src="27.jpg">
-<img src="28.jpg"><img src="29.jpg"><img src="30.jpg">
+    <section class="container gallery-material-section">
+      <div class="row gallery-material-grid">
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="1.png" alt="Basketball action image" />
+            </div>
+          </div>
+        </div>
 
-<img src="31.jpg"><img src="32.jpg"><img src="33.png">
-<img src="34.png"><img src="35.png"><img src="36.png">
-<img src="37.png"><img src="38.png"><img src="39.png"><img src="40.png">
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="2.png" alt="Basketball motion blur image" />
+            </div>
+          </div>
+        </div>
 
-</section>
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="5.png" alt="Basketball dunk image" />
+            </div>
+          </div>
+        </div>
 
-<div class="lightbox" id="lightbox">
-<img id="lightbox-img">
-</div>
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="8.png" alt="Basketball emotion image" />
+            </div>
+          </div>
+        </div>
 
-<script src="script.js"></script>
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="14.png" alt="Basketball gameday graphic" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="21.jpeg" alt="Miami baseball player on field" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="22.jpeg" alt="Pitcher throwing from mound" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="23.jpeg" alt="Miami hitter at the plate" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="24.jpeg" alt="Football commitment graphic" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="25.jpeg" alt="Black and white close-up detail" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="26.jpg" alt="Swimmer on starting block" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="27.jpg" alt="State championship swim team" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="28.jpeg" alt="Swim medal stand moment" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="29.jpeg" alt="Swimmer portrait after race" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4 xl3">
+          <div class="card gallery-material-card">
+            <div class="card-image">
+              <img class="materialboxed responsive-img" src="30.jpeg" alt="Swimmers celebrating with medals" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Oliver Zureick</h3>
+        <p>Sports photography and creative visual storytelling.</p>
+      </div>
+      <div>
+        <p><strong>Email:</strong> zureicof@miamioh.edu</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
