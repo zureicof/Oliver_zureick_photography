@@ -9,6 +9,10 @@
     content="Photography, design, and sports media work by Oliver Zureick."
   />
   <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  />
 </head>
 <body>
   <header class="site-header">
@@ -18,7 +22,7 @@
         <p class="tagline">Photography • Design • Sports Media</p>
       </div>
 
-      <nav>
+      <nav class="site-nav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html" class="active">Portfolio</a></li>
@@ -37,12 +41,12 @@
           <p class="section-label">Selected Work</p>
           <h2>Photography and design built around sports storytelling.</h2>
           <p class="page-intro-text">
-            This page brings together different parts of my work, from live sports coverage
-            and detail-oriented photography to graphics built for promotion and athlete identity.
+            This page brings together live sports coverage, detail-driven photography,
+            and graphic work built for promotion, identity, and storytelling.
           </p>
         </div>
 
-        <button id="hidePortfolioBtn" class="btn btn-secondary">Toggle Summary</button>
+        <button id="hidePortfolioBtn" class="btn btn-secondary" type="button">Toggle Summary</button>
       </div>
     </section>
 
@@ -50,13 +54,14 @@
       <div id="portfolioSummary" class="panel-box">
         <h2>Portfolio Overview</h2>
         <p>
-          My portfolio is built around range. I want to be able to show strong live-action work,
-          more creative visual storytelling, and design pieces that can actually be used by teams,
+          My portfolio is built around range. I want to show strong live-action work,
+          more creative storytelling, and designs that can actually be used by teams,
           athletes, and media outlets.
         </p>
         <p>
-          The goal is not just to show that I can take pictures. It’s to show that I can build
-          a body of work that feels professional, consistent, and useful in real sports media settings.
+          The goal is not just to show that I can take pictures. It’s to show that I can
+          build a full body of work that feels professional, consistent, and useful in real
+          sports media settings.
         </p>
       </div>
 
@@ -67,106 +72,206 @@
         </div>
 
         <div class="button-row">
-          <button class="filter-btn" data-filter="all">Show All</button>
-          <button class="filter-btn" data-filter="photo">Photos</button>
-          <button class="filter-btn" data-filter="graphic">Graphics</button>
+          <button class="filter-btn" data-filter="all" type="button">Show All</button>
+          <button class="filter-btn" data-filter="photo" type="button">Photos</button>
+          <button class="filter-btn" data-filter="graphic" type="button">Graphics</button>
         </div>
       </div>
 
-      <section class="portfolio-grid portfolio-grid-large">
-        <article class="portfolio-card portfolio-card-feature filter-item photo">
-          <img src="22.jpeg" alt="Pitcher throwing from the mound" />
-          <div class="card-body">
+      <section class="portfolio-hierarchy-grid">
+        <article class="portfolio-tile portfolio-xl filter-item photo">
+          <img
+            class="materialboxed"
+            src="22.jpeg"
+            alt="Pitcher throwing from the mound"
+            data-caption="Baseball Action — mechanics, timing, and stronger in-game composition."
+          />
+          <span class="category-tag">Baseball</span>
+          <div class="tile-caption">
             <h3>Baseball Action</h3>
-            <p>Sports coverage focused on mechanics, timing, and stronger in-game composition.</p>
+            <p>Mechanics, timing, and stronger in-game composition.</p>
           </div>
         </article>
 
-        <article class="portfolio-card filter-item photo">
-          <img src="21.jpeg" alt="Miami baseball player walking on the field" />
-          <div class="card-body">
-            <h3>Pregame Detail</h3>
-            <p>A cleaner lifestyle-style sports image that adds more personality to the portfolio.</p>
-          </div>
-        </article>
-
-        <article class="portfolio-card filter-item photo">
-          <img src="23.jpeg" alt="Miami baseball hitter waiting on a pitch" />
-          <div class="card-body">
-            <h3>At The Plate</h3>
-            <p>Built around anticipation, spacing, and the tension before contact.</p>
-          </div>
-        </article>
-
-        <article class="portfolio-card filter-item graphic">
-          <img src="24.jpeg" alt="Football commitment graphic" />
-          <div class="card-body">
+        <article class="portfolio-tile portfolio-lg filter-item graphic">
+          <img
+            class="materialboxed"
+            src="24.jpeg"
+            alt="Football commitment graphic"
+            data-caption="Commitment Graphic — typography, athlete cutouts, and stronger visual energy."
+          />
+          <span class="category-tag">Design</span>
+          <div class="tile-caption">
             <h3>Commitment Graphic</h3>
-            <p>Creative design work mixing athlete cutouts, typography, and stronger visual energy.</p>
+            <p>Typography, athlete cutouts, and stronger visual energy.</p>
           </div>
         </article>
 
-        <article class="portfolio-card filter-item photo">
-          <img src="27.jpg" alt="Swim team holding state championship trophy" />
-          <div class="card-body">
+        <article class="portfolio-tile portfolio-md filter-item photo">
+          <img
+            class="materialboxed"
+            src="21.jpeg"
+            alt="Baseball player walking on the field"
+            data-caption="Pregame Detail — a cleaner sports image that adds personality and atmosphere."
+          />
+          <span class="category-tag">Baseball</span>
+          <div class="tile-caption">
+            <h3>Pregame Detail</h3>
+            <p>A cleaner sports image that adds personality and atmosphere.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-tile portfolio-md filter-item photo">
+          <img
+            class="materialboxed"
+            src="23.jpeg"
+            alt="Baseball hitter waiting on a pitch"
+            data-caption="At The Plate — built around anticipation, spacing, and tension."
+          />
+          <span class="category-tag">Baseball</span>
+          <div class="tile-caption">
+            <h3>At The Plate</h3>
+            <p>Built around anticipation, spacing, and tension.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-tile portfolio-lg filter-item photo">
+          <img
+            class="materialboxed"
+            src="27.jpg"
+            alt="Swim team holding state championship trophy"
+            data-caption="Team Championship — emotion-driven coverage centered on achievement and identity."
+          />
+          <span class="category-tag">Swimming</span>
+          <div class="tile-caption">
             <h3>Team Championship</h3>
-            <p>Emotion-driven coverage centered on achievement and team identity.</p>
+            <p>Emotion-driven coverage centered on achievement and identity.</p>
           </div>
         </article>
 
-        <article class="portfolio-card filter-item photo">
-          <img src="28.jpeg" alt="Swimmer on medal stand" />
-          <div class="card-body">
+        <article class="portfolio-tile portfolio-md filter-item photo">
+          <img
+            class="materialboxed"
+            src="28.jpeg"
+            alt="Swimmer on medal stand"
+            data-caption="Podium Moment — documentary-style storytelling in a championship setting."
+          />
+          <span class="category-tag">Swimming</span>
+          <div class="tile-caption">
             <h3>Podium Moment</h3>
-            <p>More documentary-style storytelling in a high-pressure championship environment.</p>
+            <p>Documentary-style storytelling in a championship setting.</p>
           </div>
         </article>
 
-        <article class="portfolio-card filter-item photo">
-          <img src="26.jpg" alt="Swimmer on starting block" />
-          <div class="card-body">
+        <article class="portfolio-tile portfolio-md filter-item photo">
+          <img
+            class="materialboxed"
+            src="26.jpg"
+            alt="Swimmer on starting block"
+            data-caption="Ready To Go — preparation, intensity, and pre-race tension."
+          />
+          <span class="category-tag">Swimming</span>
+          <div class="tile-caption">
             <h3>Ready To Go</h3>
-            <p>Focused on preparation, intensity, and pre-race tension.</p>
+            <p>Preparation, intensity, and pre-race tension.</p>
           </div>
         </article>
 
-        <article class="portfolio-card filter-item photo">
-          <img src="29.jpeg" alt="Swimmer portrait after race" />
-          <div class="card-body">
+        <article class="portfolio-tile portfolio-md filter-item photo">
+          <img
+            class="materialboxed"
+            src="29.jpeg"
+            alt="Swimmer portrait after race"
+            data-caption="Post-Race Portrait — a tighter image that adds range beyond the action itself."
+          />
+          <span class="category-tag">Swimming</span>
+          <div class="tile-caption">
             <h3>Post-Race Portrait</h3>
-            <p>A tighter, more personal sports image that adds range beyond the action itself.</p>
+            <p>A tighter image that adds range beyond the action itself.</p>
           </div>
         </article>
 
-        <article class="portfolio-card filter-item photo">
-          <img src="30.jpeg" alt="Swimmers celebrating with medals" />
-          <div class="card-body">
+        <article class="portfolio-tile portfolio-md filter-item photo">
+          <img
+            class="materialboxed"
+            src="30.jpeg"
+            alt="Swimmers celebrating with medals"
+            data-caption="Celebration — built around confidence, personality, and energy."
+          />
+          <span class="category-tag">Swimming</span>
+          <div class="tile-caption">
             <h3>Celebration</h3>
-            <p>Built around personality, confidence, and the energy after a big result.</p>
+            <p>Built around confidence, personality, and energy.</p>
           </div>
         </article>
 
-        <article class="portfolio-card filter-item photo">
-          <img src="25.jpeg" alt="Black and white close-up tattoo detail" />
-          <div class="card-body">
+        <article class="portfolio-tile portfolio-sm filter-item photo">
+          <img
+            class="materialboxed"
+            src="25.jpeg"
+            alt="Black and white close-up detail"
+            data-caption="Detail Shot — a more artistic image that helps the portfolio feel less one-dimensional."
+          />
+          <span class="category-tag">Detail</span>
+          <div class="tile-caption">
             <h3>Detail Shot</h3>
-            <p>A more artistic detail image that helps the portfolio feel less one-dimensional.</p>
+            <p>A more artistic image that helps the portfolio feel less one-dimensional.</p>
           </div>
         </article>
 
-        <article class="portfolio-card filter-item graphic">
-          <img src="14.png" alt="Basketball gameday graphic" />
-          <div class="card-body">
+        <article class="portfolio-tile portfolio-sm filter-item graphic">
+          <img
+            class="materialboxed"
+            src="14.png"
+            alt="Basketball gameday graphic"
+            data-caption="Basketball Graphic — promotional design built for attention and branding."
+          />
+          <span class="category-tag">Basketball</span>
+          <div class="tile-caption">
             <h3>Basketball Graphic</h3>
-            <p>Promotional design built for attention, branding, and social media use.</p>
+            <p>Promotional design built for attention and branding.</p>
           </div>
         </article>
 
-        <article class="portfolio-card filter-item graphic">
-          <img src="17.png" alt="Swimming recognition graphic" />
-          <div class="card-body">
+        <article class="portfolio-tile portfolio-sm filter-item graphic">
+          <img
+            class="materialboxed"
+            src="17.png"
+            alt="Swimming recognition graphic"
+            data-caption="Recognition Graphic — achievement-based design built for pride and impact."
+          />
+          <span class="category-tag">Design</span>
+          <div class="tile-caption">
             <h3>Recognition Graphic</h3>
-            <p>Achievement-based design built for school pride, recognition, and impact.</p>
+            <p>Achievement-based design built for pride and impact.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-tile portfolio-sm filter-item photo">
+          <img
+            class="materialboxed"
+            src="31.png"
+            alt="Additional portfolio image 31"
+            data-caption="Additional Work — extra portfolio image."
+          />
+          <span class="category-tag">Portfolio</span>
+          <div class="tile-caption">
+            <h3>Additional Work</h3>
+            <p>Extra image added to expand the portfolio range.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-tile portfolio-sm filter-item photo">
+          <img
+            class="materialboxed"
+            src="32.png"
+            alt="Additional portfolio image 32"
+            data-caption="Additional Work — extra portfolio image."
+          />
+          <span class="category-tag">Portfolio</span>
+          <div class="tile-caption">
+            <h3>Additional Work</h3>
+            <p>Extra image added to expand the portfolio range.</p>
           </div>
         </article>
       </section>
@@ -187,6 +292,7 @@
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

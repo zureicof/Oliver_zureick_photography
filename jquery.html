@@ -1,19 +1,123 @@
-<main class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oliver Zureick | Services</title>
+  <meta
+    name="description"
+    content="Creative services and interactive web features by Oliver Zureick."
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-block">
+        <h1>Oliver Zureick</h1>
+        <p class="tagline">Sports Photography • Creative Services</p>
+      </div>
 
-<h2>Services</h2>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="jquery.html" class="active">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section class="grid">
+  <main class="page-main">
+    <section class="container">
+      <div class="panel-box">
+        <p class="section-label">Services</p>
+        <h2>Creative work and interactive web features</h2>
+        <p>
+          This page combines the services I offer with the required jQuery interactions.
+          The goal is to keep the page functional while still making it feel like part of the portfolio.
+        </p>
+      </div>
 
-<div class="tile"><img src="16.png"><div class="overlay">Coverage</div></div>
-<div class="tile"><img src="17.png"><div class="overlay">Design</div></div>
-<div class="tile"><img src="18.png"><div class="overlay">Storytelling</div></div>
+      <section class="cards-three service-preview-grid">
+        <article class="info-card">
+          <img src="22.jpeg" alt="Baseball coverage" class="service-image" />
+          <h3>Game Coverage</h3>
+          <p>Live sports photography capturing real moments, action, and atmosphere.</p>
+        </article>
 
-</section>
+        <article class="info-card">
+          <img src="24.jpeg" alt="Creative graphic work" class="service-image" />
+          <h3>Creative Design</h3>
+          <p>Promotional graphics and visual content built for athletes and teams.</p>
+        </article>
 
-<button id="hideBtn">Toggle Info</button>
+        <article class="info-card">
+          <img src="27.jpg" alt="Championship storytelling image" class="service-image" />
+          <h3>Storytelling Content</h3>
+          <p>Coverage focused on emotion, identity, and the moments around the result.</p>
+        </article>
+      </section>
 
-<div id="box">
-  <p>Sports media services including photography and creative design.</p>
-</div>
+      <section class="interactive-grid">
+        <div class="panel-box">
+          <h2>More About My Work</h2>
+          <p>Use the button below to show or hide extra information.</p>
+          <button id="hideBtn" class="btn" type="button">Show / Hide Details</button>
 
-</main>
+          <div id="box" class="interactive-box">
+            <p>
+              I create sports content for social media, school athletics, athlete branding,
+              and event coverage. That includes live action, portraits, graphics, and documentary-style storytelling.
+            </p>
+          </div>
+        </div>
+
+        <div class="panel-box">
+          <h2>Service Options</h2>
+          <p>This section uses another jQuery interaction to slide the list open and closed.</p>
+          <button id="slideBtn" class="btn" type="button">Show / Hide Service List</button>
+
+          <ul id="serviceList" class="service-list">
+            <li>Game day photography</li>
+            <li>Athlete portraits</li>
+            <li>Creative sports graphics</li>
+            <li>Championship and event coverage</li>
+            <li>Social media content</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel-box">
+        <h2>Quick Contact Preview</h2>
+        <p>Enter your name below to preview a simple response using jQuery.</p>
+
+        <div class="form-row">
+          <input type="text" id="nameInput" placeholder="Enter your name" />
+          <button id="submitBtn" class="btn" type="button">Submit</button>
+        </div>
+
+        <p id="output" class="output-message"></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Oliver Zureick</h3>
+        <p>Sports photography, graphics, and athlete-focused content.</p>
+      </div>
+
+      <div>
+        <p><strong>Email:</strong> zureicof@miamioh.edu</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

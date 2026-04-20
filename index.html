@@ -18,7 +18,7 @@
         <p class="tagline">Sports Photography • Creative Media • Visual Storytelling</p>
       </div>
 
-      <nav>
+      <nav class="site-nav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
@@ -37,34 +37,37 @@
           <p class="section-label">Sports Creative Portfolio</p>
           <h2>Covering sports with a focus on real moments, strong visuals, and clear storytelling.</h2>
           <p>
-            I’m Oliver Zureick, a sports media student at Miami University with a focus on photography,
-            creative content, and visual storytelling. My work is built around live competition,
-            athlete-focused imagery, and design that feels intentional instead of generic.
+            I’m Oliver Zureick, a sports media student at Miami University with a focus on
+            photography, creative content, and visual storytelling. My work is built around
+            live competition, athlete-focused imagery, and design that feels intentional instead
+            of generic.
           </p>
           <p>
-            I want the work I make to feel polished, but still honest to the moment. Whether I’m shooting
-            baseball, basketball, swimming, or creating promotional graphics, the goal is the same:
-            make content that stands out and still feels real.
+            I want the work I make to feel polished without losing what made the moment worth
+            capturing in the first place. Whether I’m shooting baseball, basketball, swimming,
+            or building promotional graphics, the goal stays the same: make content that feels
+            sharp, honest, and worth remembering.
           </p>
 
           <div class="button-row">
             <a href="portfolio.html" class="btn">View Portfolio</a>
-            <button id="welcomeBtn" class="btn btn-secondary">Toggle Intro Message</button>
+            <button id="welcomeBtn" class="btn btn-secondary" type="button">Toggle Intro</button>
           </div>
 
           <p id="welcomeMessage" class="welcome-message">
-            Thanks for checking out my work. This site brings together photography, design, and interactive media in one portfolio.
+            Thanks for checking out my work. This site brings together photography, design,
+            and interactive media in one place.
           </p>
         </div>
 
         <aside class="hero-side">
-          <img src="21.jpeg" alt="Miami baseball player on the field" />
+          <img src="21.jpeg" alt="Baseball player walking on the field" />
           <div class="side-card">
             <h3>Quick Profile</h3>
             <ul>
               <li>Miami University student</li>
               <li>Class of 2029</li>
-              <li>Cincinnati, Ohio</li>
+              <li>Based in Cincinnati, Ohio</li>
               <li>Sports media and photography focus</li>
             </ul>
           </div>
@@ -77,7 +80,7 @@
         <article class="info-card">
           <h3>Game Coverage</h3>
           <p>
-            Action-focused photography built around timing, atmosphere, and competition.
+            Photography built around timing, atmosphere, and the moments that define a game.
           </p>
         </article>
 
@@ -91,7 +94,7 @@
         <article class="info-card">
           <h3>Storytelling</h3>
           <p>
-            Images that go beyond the play itself and help tell the full story around it.
+            Images that help show the personality, pressure, and energy around competition.
           </p>
         </article>
       </div>
@@ -104,7 +107,7 @@
           <h2>Recent images and design pieces</h2>
         </div>
 
-        <div class="portfolio-grid">
+        <div class="portfolio-grid home-feature-grid">
           <article class="portfolio-card">
             <img src="22.jpeg" alt="Pitcher delivering a pitch" />
             <div class="card-body">
@@ -117,7 +120,7 @@
             <img src="24.jpeg" alt="Football commitment graphic" />
             <div class="card-body">
               <h3>Creative Graphic</h3>
-              <p>Design work that blends athlete photography, branding, and stronger visual impact.</p>
+              <p>Design work blending athlete photography, branding, and stronger visual impact.</p>
             </div>
           </article>
 
@@ -133,11 +136,26 @@
     </section>
 
     <section class="mosaic-section">
-      <div class="container mosaic-grid">
-        <img src="23.jpeg" alt="Miami baseball hitter at the plate" />
-        <img src="25.jpeg" alt="Black and white close-up tattoo detail" />
-        <img src="26.jpg" alt="Swimmer on the starting block" />
-        <img src="30.jpeg" alt="Swimmers celebrating after competition" />
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">More Work</p>
+          <h2>A quick look across different styles</h2>
+        </div>
+
+        <div class="mosaic-grid">
+          <div class="mosaic-item">
+            <img src="23.jpeg" alt="Baseball hitter at the plate" />
+          </div>
+          <div class="mosaic-item">
+            <img src="25.jpeg" alt="Black and white close-up detail" />
+          </div>
+          <div class="mosaic-item">
+            <img src="26.jpg" alt="Swimmer on the starting block" />
+          </div>
+          <div class="mosaic-item">
+            <img src="30.jpeg" alt="Swimmers celebrating after competition" />
+          </div>
+        </div>
       </div>
     </section>
   </main>
