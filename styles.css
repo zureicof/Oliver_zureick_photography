@@ -36,8 +36,6 @@ img {
   margin: 0 auto;
 }
 
-/* HEADER */
-
 .site-header {
   background: linear-gradient(90deg, #000000 0%, #101010 55%, #1a1a1a 100%);
   border-bottom: 4px solid var(--red);
@@ -62,10 +60,6 @@ img {
 .tagline {
   color: var(--gray-2);
   font-size: 0.98rem;
-}
-
-.site-nav {
-  width: auto;
 }
 
 .nav-list {
@@ -93,8 +87,6 @@ img {
   background: var(--red);
   border-color: var(--red);
 }
-
-/* GLOBAL */
 
 .page-main {
   padding: 2.2rem 0 3.5rem;
@@ -179,8 +171,6 @@ li {
   padding: 1.5rem;
   box-shadow: var(--shadow);
 }
-
-/* HOME */
 
 .hero-section {
   padding: 2.2rem 0 1rem;
@@ -288,8 +278,6 @@ li {
 .mosaic-item img:hover {
   transform: scale(1.02);
 }
-
-/* MATCHED TILE SYSTEM */
 
 .page-top-inner {
   display: flex;
@@ -399,8 +387,6 @@ li {
   color: #fff !important;
 }
 
-/* GALLERY */
-
 .gallery-hero-grid {
   display: flex;
   flex-wrap: wrap;
@@ -429,8 +415,6 @@ li {
 .gallery-side-card ul {
   padding-left: 1.2rem;
 }
-
-/* SERVICES / JQUERY */
 
 .service-preview-grid {
   margin-bottom: 2rem;
@@ -486,8 +470,6 @@ li {
   color: var(--white);
 }
 
-/* CONTACT */
-
 .contact-grid-main {
   display: flex;
   flex-wrap: wrap;
@@ -516,8 +498,6 @@ li {
   margin-top: 2rem;
 }
 
-/* FOOTER */
-
 .site-footer {
   background: #050505;
   border-top: 4px solid var(--red);
@@ -540,8 +520,6 @@ li {
   color: var(--red);
   letter-spacing: 0.5px;
 }
-
-/* RESPONSIVE */
 
 @media (max-width: 1200px) {
   .home-feature-grid {
