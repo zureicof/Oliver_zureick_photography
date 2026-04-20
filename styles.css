@@ -41,33 +41,43 @@ img {
 .site-header {
   background: linear-gradient(90deg, #000000 0%, #101010 55%, #1a1a1a 100%);
   border-bottom: 4px solid var(--red);
-  padding: 1.2rem 0;
+  padding: 1.6rem 0 1.2rem;
 }
 
 .header-inner {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
 
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .brand-block h1 {
-  font-size: 2.1rem;
+  font-size: 2.35rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.2rem;
+  letter-spacing: 1.2px;
+  margin-bottom: 0.3rem;
+  line-height: 1;
 }
 
 .tagline {
   color: var(--gray-2);
-  font-size: 0.98rem;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
   gap: 0.8rem;
 }
 
@@ -77,11 +87,14 @@ img {
   text-decoration: none;
   background: var(--black-3);
   border: 1px solid #363636;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1.15rem;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.88rem;
+  letter-spacing: 0.4px;
   transition: 0.25s ease;
+  min-width: 108px;
+  text-align: center;
 }
 
 .nav-list a:hover,
@@ -508,9 +521,17 @@ li {
   }
 
   .tile-sm,
-  .tile-md { grid-column: span 4; }
-  .tile-lg { grid-column: span 6; }
-  .tile-xl { grid-column: span 8; }
+  .tile-md {
+    grid-column: span 4;
+  }
+
+  .tile-lg {
+    grid-column: span 6;
+  }
+
+  .tile-xl {
+    grid-column: span 8;
+  }
 }
 
 @media (max-width: 900px) {
@@ -528,11 +549,19 @@ li {
   .mosaic-grid {
     columns: 2 220px;
   }
+
+  .header-inner {
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 768px) {
   .brand-block h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+  }
+
+  .tagline {
+    font-size: 0.92rem;
   }
 
   h2 {
@@ -547,6 +576,7 @@ li {
   .nav-list a {
     width: 100%;
     text-align: center;
+    min-width: 0;
   }
 
   .home-feature-grid {
