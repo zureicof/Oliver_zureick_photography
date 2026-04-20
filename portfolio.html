@@ -1,39 +1,228 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Work</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oliver Zureick | Portfolio</title>
+  <meta name="description" content="Photography, design, and sports media work by Oliver Zureick." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-block">
+        <h1>Oliver Zureick</h1>
+        <p class="tagline">Photography • Design • Sports Media</p>
+      </div>
 
-<header>
-<h1>Work</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="portfolio.html">Work</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="jquery.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<section class="grid">
+  <main class="page-main">
+    <section class="portfolio-hero">
+      <div class="container portfolio-hero-grid">
+        <div class="portfolio-hero-copy">
+          <p class="section-label">Selected Work</p>
+          <h2>A mix of live sports coverage, design, and images built around identity.</h2>
+          <p>
+            I want this portfolio to show range without losing consistency. Some projects are straightforward and built
+            around clean coverage. Others lean more creative through layering, motion, or stronger graphic design.
+            What connects all of them is the same goal: make the work feel polished, memorable, and useful.
+          </p>
+        </div>
 
-<img src="1.png"><img src="10.png"><img src="11.png">
-<img src="15.png"><img src="16.png"><img src="17.png">
+        <div class="portfolio-hero-image">
+          <img src="24.png" alt="Football commitment graphic" />
+        </div>
+      </div>
+    </section>
 
-<img src="21.png"><img src="22.png"><img src="23.png"><img src="24.png">
+    <section class="container">
+      <div id="portfolioSummary" class="panel-box summary-panel">
+        <div class="summary-header">
+          <div>
+            <p class="section-label">Portfolio Summary</p>
+            <h2>Work organized by strength, not just category</h2>
+          </div>
+          <button id="hidePortfolioBtn" class="btn btn-secondary">Toggle Summary</button>
+        </div>
 
-<img src="31.jpg"><img src="32.jpg"><img src="33.png"><img src="34.png">
-<img src="35.png"><img src="36.png"><img src="37.png"><img src="38.png">
-<img src="39.png"><img src="40.png">
+        <p>
+          The strongest part of my portfolio is variety with a clear style behind it. I can cover live moments,
+          build promotional pieces, and create visuals that feel stronger than standard event documentation.
+        </p>
+      </div>
 
-</section>
+      <section class="portfolio-section">
+        <div class="section-heading">
+          <p class="section-label">Featured Project</p>
+          <h2>Design work with stronger visual impact</h2>
+        </div>
 
-<div class="lightbox" id="lightbox">
-<img id="lightbox-img">
-</div>
+        <div class="featured-project-grid">
+          <article class="featured-project-main">
+            <img src="24.png" alt="Football committed graphic" />
+          </article>
 
-<script src="script.js"></script>
+          <div class="featured-project-side">
+            <div class="mini-project-card">
+              <img src="15.png" alt="Basketball gameday poster" />
+              <div class="card-body">
+                <h3>Basketball Poster</h3>
+                <p>Promotional design built around scale, color, and visual hierarchy.</p>
+              </div>
+            </div>
+
+            <div class="mini-project-card">
+              <img src="16.png" alt="Opening day baseball poster" />
+              <div class="card-body">
+                <h3>Opening Day Graphic</h3>
+                <p>Baseball-focused design combining branding, typography, and athlete cutouts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio-section">
+        <div class="section-heading">
+          <p class="section-label">Game Coverage</p>
+          <h2>Baseball and basketball moments</h2>
+        </div>
+
+        <div class="portfolio-grid portfolio-grid-large">
+          <article class="portfolio-card">
+            <img src="21.png" alt="Miami baseball player fielding" />
+            <div class="card-body">
+              <h3>Field Presence</h3>
+              <p>Clean framing and body language that let the image breathe.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="22.png" alt="Pitcher on the mound" />
+            <div class="card-body">
+              <h3>Pitching Action</h3>
+              <p>Strong timing and posture captured at the point of maximum tension.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="23.png" alt="Batter at the plate" />
+            <div class="card-body">
+              <h3>At The Plate</h3>
+              <p>Game coverage with more focus on anticipation and the environment around the player.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="8.png" alt="Basketball player helping teammate up" />
+            <div class="card-body">
+              <h3>Real Emotion</h3>
+              <p>An image built around connection and the kind of moment people remember later.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="12.png" alt="Basketball bench side action" />
+            <div class="card-body">
+              <h3>Bench-Side Action</h3>
+              <p>Coverage that shows not just the game, but the reactions and pressure around it.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="13.png" alt="Basketball creative graphic" />
+            <div class="card-body">
+              <h3>Creative Basketball Edit</h3>
+              <p>A hybrid piece that sits between photography and design.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="portfolio-section">
+        <div class="section-heading">
+          <p class="section-label">Swimming & Team Storytelling</p>
+          <h2>Work that adds identity beyond the action itself</h2>
+        </div>
+
+        <div class="portfolio-grid portfolio-grid-large">
+          <article class="portfolio-card">
+            <img src="25.jpg" alt="Swim team championship trophy" />
+            <div class="card-body">
+              <h3>Championship Team Shot</h3>
+              <p>Celebration coverage that shows pride, scale, and team identity.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="26.jpg" alt="Swim award podium" />
+            <div class="card-body">
+              <h3>Meet Atmosphere</h3>
+              <p>Images that use the venue itself to tell the story of the moment.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="27.jpg" alt="Black and white close detail portrait" />
+            <div class="card-body">
+              <h3>Detail Portrait</h3>
+              <p>Tighter, more personal work that adds range to the portfolio.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="28.jpg" alt="Swimmer on the starting block" />
+            <div class="card-body">
+              <h3>Before The Start</h3>
+              <p>Pre-race visuals focused on focus, nerves, and body position.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="29.jpg" alt="Swimmer backstage portrait" />
+            <div class="card-body">
+              <h3>Backstage Moment</h3>
+              <p>Not every strong image comes in the race. Sometimes the best ones happen around it.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <img src="30.jpg" alt="Swimmers posing with medals" />
+            <div class="card-body">
+              <h3>Personality & Presence</h3>
+              <p>Work that shows athletes as people, not just competitors.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Oliver Zureick</h3>
+        <p>Photography and design built around sports media.</p>
+      </div>
+
+      <div>
+        <p><strong>Email:</strong> zureicof@miamioh.edu</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
