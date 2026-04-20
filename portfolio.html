@@ -4,15 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oliver Zureick | Portfolio</title>
-  <meta
-    name="description"
-    content="Photography, design, and sports media work by Oliver Zureick."
-  />
+  <meta name="description" content="Photography, design, and sports media work by Oliver Zureick." />
   <link rel="stylesheet" href="styles.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 </head>
 <body>
   <header class="site-header">
@@ -35,7 +29,7 @@
   </header>
 
   <main class="page-main">
-    <section class="standard-page-heading">
+    <section class="standard-page-heading reveal">
       <div class="container">
         <p class="section-label">Portfolio</p>
         <h2>Selected Work</h2>
@@ -43,165 +37,47 @@
           A focused collection of photography and creative work across baseball,
           basketball, swimming, and sports design.
         </p>
-
-        <div class="button-row">
-          <button id="hidePortfolioBtn" class="btn btn-secondary" type="button">Toggle Notes</button>
-        </div>
       </div>
     </section>
 
-    <section class="page-shell">
+    <section class="page-shell reveal">
       <div class="container">
-        <div id="portfolioSummary" class="panel-box">
+        <div class="panel-box">
           <h2>Overview</h2>
           <p>
-            This page is meant to show range without feeling cluttered. It mixes game coverage,
-            championship moments, detail shots, and graphic work in a cleaner portfolio layout.
+            This page is built to show stronger work in a cleaner portfolio format.
+            Click any image to enlarge it.
           </p>
         </div>
 
-        <div class="page-panel page-panel-tight">
-          <p class="section-label">Browse</p>
-          <h2>Categories</h2>
-          <div class="button-row">
-            <button class="filter-btn" data-filter="all" type="button">All</button>
-            <button class="filter-btn" data-filter="photo" type="button">Photo</button>
-            <button class="filter-btn" data-filter="graphic" type="button">Graphic</button>
-          </div>
-        </div>
-
-        <section class="tile-grid tile-grid-portfolio">
-          <article class="media-tile tile-xl filter-item photo">
-            <img class="materialboxed" src="22.png" alt="Baseball action" data-caption="Baseball" />
-            <span class="category-tag">Baseball</span>
-            <div class="tile-overlay"><h3>Baseball</h3></div>
-          </article>
-
-          <article class="media-tile tile-lg filter-item graphic">
-            <img class="materialboxed" src="24.png" alt="Graphic design" data-caption="Graphic" />
-            <span class="category-tag">Graphic</span>
-            <div class="tile-overlay"><h3>Graphic</h3></div>
-          </article>
-
-          <article class="media-tile tile-md filter-item photo">
-            <img class="materialboxed" src="21.png" alt="Pregame image" data-caption="Pregame" />
-            <span class="category-tag">Baseball</span>
-            <div class="tile-overlay"><h3>Pregame</h3></div>
-          </article>
-
-          <article class="media-tile tile-md filter-item photo">
-            <img class="materialboxed" src="23.png" alt="At bat image" data-caption="At Bat" />
-            <span class="category-tag">Baseball</span>
-            <div class="tile-overlay"><h3>At Bat</h3></div>
-          </article>
-
-          <article class="media-tile tile-lg filter-item photo">
-            <img class="materialboxed" src="27.jpg" alt="Championship team image" data-caption="Champions" />
-            <span class="category-tag">Swimming</span>
-            <div class="tile-overlay"><h3>Champions</h3></div>
-          </article>
-
-          <article class="media-tile tile-md filter-item photo">
-            <img class="materialboxed" src="28.jpg" alt="Podium image" data-caption="Podium" />
-            <span class="category-tag">Swimming</span>
-            <div class="tile-overlay"><h3>Podium</h3></div>
-          </article>
-
-          <article class="media-tile tile-md filter-item photo">
-            <img class="materialboxed" src="26.jpg" alt="Swim start image" data-caption="Start" />
-            <span class="category-tag">Swimming</span>
-            <div class="tile-overlay"><h3>Start</h3></div>
-          </article>
-
-          <article class="media-tile tile-md filter-item photo">
-            <img class="materialboxed" src="29.jpg" alt="Portrait image" data-caption="Portrait" />
-            <span class="category-tag">Swimming</span>
-            <div class="tile-overlay"><h3>Portrait</h3></div>
-          </article>
-
-          <article class="media-tile tile-md filter-item photo">
-            <img class="materialboxed" src="30.jpg" alt="Celebration image" data-caption="Celebration" />
-            <span class="category-tag">Swimming</span>
-            <div class="tile-overlay"><h3>Celebration</h3></div>
-          </article>
-
-          <article class="media-tile tile-sm filter-item photo">
-            <img class="materialboxed" src="25.jpg" alt="Detail image" data-caption="Detail" />
-            <span class="category-tag">Detail</span>
-            <div class="tile-overlay"><h3>Detail</h3></div>
-          </article>
-
-          <article class="media-tile tile-sm filter-item graphic">
-            <img class="materialboxed" src="14.png" alt="Basketball graphic" data-caption="Poster" />
-            <span class="category-tag">Graphic</span>
-            <div class="tile-overlay"><h3>Poster</h3></div>
-          </article>
-
-          <article class="media-tile tile-sm filter-item graphic">
-            <img class="materialboxed" src="17.png" alt="Recognition graphic" data-caption="Feature" />
-            <span class="category-tag">Graphic</span>
-            <div class="tile-overlay"><h3>Feature</h3></div>
-          </article>
-
-          <article class="media-tile tile-sm filter-item photo">
-            <img class="materialboxed" src="12.png" alt="Portfolio image" data-caption="Game Day" />
-            <span class="category-tag">Basketball</span>
-            <div class="tile-overlay"><h3>Game Day</h3></div>
-          </article>
-
-          <article class="media-tile tile-sm filter-item photo">
-            <img class="materialboxed" src="13.png" alt="Portfolio image" data-caption="Moment" />
-            <span class="category-tag">Basketball</span>
-            <div class="tile-overlay"><h3>Moment</h3></div>
-          </article>
-
-          <article class="media-tile tile-sm filter-item photo">
-            <img class="materialboxed" src="15.png" alt="Portfolio image" data-caption="Action" />
-            <span class="category-tag">Basketball</span>
-            <div class="tile-overlay"><h3>Action</h3></div>
-          </article>
-
-          <article class="media-tile tile-sm filter-item photo">
-            <img class="materialboxed" src="16.png" alt="Portfolio image" data-caption="Focus" />
-            <span class="category-tag">Basketball</span>
-            <div class="tile-overlay"><h3>Focus</h3></div>
-          </article>
-
-          <article class="media-tile tile-sm filter-item photo">
-            <img class="materialboxed" src="18.png" alt="Portfolio image" data-caption="Drive" />
-            <span class="category-tag">Basketball</span>
-            <div class="tile-overlay"><h3>Drive</h3></div>
-          </article>
-
-          <article class="media-tile tile-sm filter-item photo">
-            <img class="materialboxed" src="19.png" alt="Portfolio image" data-caption="Pressure" />
-            <span class="category-tag">Basketball</span>
-            <div class="tile-overlay"><h3>Pressure</h3></div>
-          </article>
-
-          <article class="media-tile tile-sm filter-item photo">
-            <img class="materialboxed" src="20.png" alt="Portfolio image" data-caption="Finish" />
-            <span class="category-tag">Basketball</span>
-            <div class="tile-overlay"><h3>Finish</h3></div>
-          </article>
-
-          <article class="media-tile tile-sm filter-item photo">
-            <img class="materialboxed" src="31.jpg" alt="Portfolio image" data-caption="Field" />
-            <span class="category-tag">Baseball</span>
-            <div class="tile-overlay"><h3>Field</h3></div>
-          </article>
-
-          <article class="media-tile tile-sm filter-item photo">
-            <img class="materialboxed" src="32.jpg" alt="Portfolio image" data-caption="Shot" />
-            <span class="category-tag">Baseball</span>
-            <div class="tile-overlay"><h3>Shot</h3></div>
-          </article>
+        <section class="masonry-gallery portfolio-masonry">
+          <div class="masonry-item hover-image"><img class="materialboxed" src="22.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="24.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="21.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="23.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="27.jpg" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="28.jpg" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="26.jpg" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="29.jpg" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="30.jpg" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="25.jpg" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="14.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="17.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="12.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="13.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="15.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="16.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="18.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="19.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="20.png" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="31.jpg" alt="Portfolio image" /></div>
+          <div class="masonry-item hover-image"><img class="materialboxed" src="32.jpg" alt="Portfolio image" /></div>
         </section>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer reveal">
     <div class="container footer-grid">
       <div>
         <h3>Oliver Zureick</h3>
