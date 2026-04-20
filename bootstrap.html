@@ -1,91 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Oliver Zureick | Bootstrap Features</title>
+  <title>Oliver Zureick | Featured</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .bootstrap-hero {
-      background: linear-gradient(90deg, #000000 0%, #111111 55%, #1a1a1a 100%);
-      border-left: 6px solid #c8102e;
-      color: white;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+    .featured-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(0,0,0,.86), rgba(0,0,0,.55)),
+        url("61.jpg") center/cover no-repeat;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      border-bottom: 4px solid #c8102e;
     }
 
-    .bootstrap-card {
-      background: #121212;
-      color: white;
-      border: 1px solid #2d2d2d;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+    .featured-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(200,16,46,.16), transparent 35%);
+      pointer-events: none;
     }
 
-    .bootstrap-card .card-title,
-    .bootstrap-card .card-text,
-    .bootstrap-card h2,
-    .bootstrap-card h3,
-    .bootstrap-card p,
-    .bootstrap-card label {
-      color: white;
+    .featured-hero-inner {
+      position: relative;
+      z-index: 2;
+      width: 90%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 5rem 0;
     }
 
-    .accordion-button:not(.collapsed) {
-      background-color: #c8102e;
-      color: white;
-    }
-
-    .accordion-button {
+    .featured-kicker {
+      color: #c8102e;
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: .75rem;
     }
 
-    .carousel-item img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
+    .featured-title {
+      font-size: clamp(2.4rem, 5vw, 5rem);
+      line-height: .95;
+      text-transform: uppercase;
+      max-width: 850px;
+      margin-bottom: 1rem;
+      color: #fff;
     }
 
-    .carousel-caption {
-      background: rgba(0, 0, 0, 0.55);
-      padding: 1rem;
-      border-radius: 4px;
+    .featured-subtitle {
+      max-width: 760px;
+      font-size: 1.05rem;
+      color: #d7d7d7;
+      margin-bottom: 1.5rem;
     }
 
-    .form-control,
-    .form-select {
-      background: #101010;
-      color: white;
-      border: 1px solid #3a3a3a;
+    .featured-button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem;
     }
 
-    .form-control:focus,
-    .form-select:focus {
-      background: #101010;
-      color: white;
-      border-color: #c8102e;
-      box-shadow: none;
-    }
-
-    .modal-content {
-      background: #121212;
-      color: white;
-      border: 1px solid #2d2d2d;
-    }
-
-    .btn-portfolio {
+    .btn-featured-main {
       background: #c8102e;
-      color: white;
+      color: #fff;
       border: none;
       font-weight: 700;
       text-transform: uppercase;
+      padding: .9rem 1.25rem;
     }
 
-    .btn-portfolio:hover {
+    .btn-featured-main:hover {
       background: #9b0f24;
-      color: white;
+      color: #fff;
+    }
+
+    .btn-featured-dark {
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.18);
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: .9rem 1.25rem;
+    }
+
+    .btn-featured-dark:hover {
+      background: rgba(255,255,255,.16);
+      color: #fff;
+    }
+
+    .featured-section {
+      padding: 4rem 0;
+    }
+
+    .featured-panel {
+      background: #111;
+      border: 1px solid #2d2d2d;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .28);
+      overflow: hidden;
+    }
+
+    .featured-project {
+      margin-bottom: 2rem;
+    }
+
+    .featured-project:last-child {
+      margin-bottom: 0;
+    }
+
+    .featured-project .project-lead {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 420px;
+      display: block;
+    }
+
+    .featured-project-copy {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      background: linear-gradient(180deg, #141414 0%, #0d0d0d 100%);
+    }
+
+    .featured-project-copy .section-label {
+      margin-bottom: .7rem;
+    }
+
+    .featured-project-copy h2 {
+      margin-bottom: 1rem;
+    }
+
+    .featured-project-copy p {
+      margin-bottom: 1.25rem;
+    }
+
+    .project-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      padding: 1.25rem;
+      background: #0c0c0c;
+      border-top: 1px solid #242424;
+    }
+
+    .project-gallery-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #2d2d2d;
+      box-shadow: 0 12px 28px rgba(0,0,0,.28);
+      transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+    }
+
+    .project-gallery-grid img:hover {
+      transform: translateY(-5px) scale(1.01);
+      filter: brightness(1.04);
+      box-shadow: 0 16px 28px rgba(0,0,0,.34), 0 0 18px rgba(200,16,46,.18);
+    }
+
+    .featured-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c8102e, transparent);
+      margin: 0 0 2rem;
+    }
+
+    .featured-intro {
+      background: #111;
+      border-left: 6px solid #c8102e;
+      padding: 1.75rem;
+      box-shadow: 0 12px 28px rgba(0,0,0,.28);
+      margin-bottom: 2rem;
+    }
+
+    .instagram-feature {
+      background: linear-gradient(180deg, #131313 0%, #0b0b0b 100%);
+      border-left: 6px solid #c8102e;
+      padding: 2rem;
+      box-shadow: 0 12px 28px rgba(0,0,0,.28);
+    }
+
+    .instagram-feature h2,
+    .instagram-feature p {
+      color: #fff;
+    }
+
+    .instagram-feature p {
+      color: #d0d0d0;
+      max-width: 800px;
+    }
+
+    .featured-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .featured-mini-grid img {
+      border: 1px solid #2d2d2d;
+      box-shadow: 0 12px 28px rgba(0,0,0,.28);
+    }
+
+    @media (max-width: 992px) {
+      .featured-project .project-lead {
+        min-height: 320px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .featured-section {
+        padding: 2.5rem 0;
+      }
+
+      .featured-project-copy {
+        padding: 1.5rem;
+      }
+
+      .featured-mini-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -102,196 +244,160 @@
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="jquery.html">Services</a></li>
-          <li><a href="bootstrap.html" class="active">Bootstrap</a></li>
+          <li><a href="bootstrap.html" class="active">Featured</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="page-main">
-    <section class="standard-page-heading">
-      <div class="container">
-        <p class="section-label">Bootstrap Page</p>
-        <h2>Interactive Portfolio Features</h2>
-        <p class="page-intro-text">
-          This page uses Bootstrap components to present my work in a more interactive way while staying connected to the overall portfolio style.
-        </p>
-      </div>
-    </section>
-
-    <section class="container mb-5">
-      <div class="bootstrap-hero">
-        <h2 class="mb-3">A More Interactive Look at My Work</h2>
-        <p class="mb-0">
-          This page highlights some of the ways sports photography, design, and storytelling can be presented using interactive layouts and responsive Bootstrap features.
-        </p>
-      </div>
-    </section>
-
-    <section class="container mb-5">
-      <div id="featuredWorkCarousel" class="carousel slide bootstrap-card" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#featuredWorkCarousel" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#featuredWorkCarousel" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#featuredWorkCarousel" data-bs-slide-to="2"></button>
-        </div>
-
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="22.png" alt="Baseball action image" />
-            <div class="carousel-caption">
-              <h3>Game Coverage</h3>
-              <p>Images built around timing, atmosphere, and live action.</p>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <img src="24.png" alt="Graphic design image" />
-            <div class="carousel-caption">
-              <h3>Creative Design</h3>
-              <p>Visual content for announcements, branding, and promotion.</p>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <img src="27.jpg" alt="Championship team image" />
-            <div class="carousel-caption">
-              <h3>Storytelling</h3>
-              <p>Moments that show emotion, achievement, and identity.</p>
-            </div>
-          </div>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#featuredWorkCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#featuredWorkCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
-    </section>
-
-    <section class="container mb-5">
-      <div class="card bootstrap-card p-4">
-        <h2 class="mb-4">What My Work Focuses On</h2>
-
-        <div class="accordion" id="workAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                Live Sports Coverage
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#workAccordion">
-              <div class="accordion-body">
-                Photography centered on timing, movement, and the moments that define competition.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                Athlete and Team Branding
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#workAccordion">
-              <div class="accordion-body">
-                Graphics and media content designed for announcements, recognition, and team identity.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                Visual Storytelling
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#workAccordion">
-              <div class="accordion-body">
-                Work that goes beyond action and focuses on atmosphere, details, and emotion.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container mb-5">
-      <div class="card bootstrap-card p-4 text-center">
-        <h2 class="mb-3">See a Quick Project Summary</h2>
-        <p class="mb-4">
-          This modal gives a quick example of how a featured project could be introduced on a portfolio page.
-        </p>
-        <button type="button" class="btn btn-portfolio" data-bs-toggle="modal" data-bs-target="#projectModal">
-          Open Project Summary
-        </button>
-      </div>
-    </section>
-
-    <div class="modal fade" id="projectModal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header border-secondary">
-            <h3 class="modal-title">Featured Project</h3>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-          </div>
-          <div class="modal-body">
-            <p>
-              One of my favorite parts of sports media is building visuals that feel polished while still showing the real energy of the moment.
-              That can mean action photography, promotional design, or coverage that captures the emotion around competition.
-            </p>
-          </div>
-          <div class="modal-footer border-secondary">
-            <button type="button" class="btn btn-portfolio" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
+  <section class="featured-hero">
+    <div class="featured-hero-inner">
+      <p class="featured-kicker">Featured Work</p>
+      <h1 class="featured-title">Three projects. Three different styles. One portfolio built around visual impact.</h1>
+      <p class="featured-subtitle">
+        This page highlights selected work across sports graphics, architectural photography, and live game-day storytelling. Each section is built to feel like a real featured project instead of a standard gallery page.
+      </p>
+      <div class="featured-button-row">
+        <a href="#featured-projects" class="btn btn-featured-main">View Projects</a>
+        <a href="https://www.instagram.com/oliver_zureick_creatives_/" target="_blank" rel="noopener noreferrer" class="btn btn-featured-dark">Stay Updated</a>
       </div>
     </div>
+  </section>
 
-    <section class="container mb-5">
-      <div class="card bootstrap-card p-4">
-        <h2 class="mb-4">Project Inquiry Form</h2>
-        <form>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="fullName" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="fullName" placeholder="Enter your name" />
+  <main class="page-main">
+    <section class="featured-section" id="featured-projects">
+      <div class="container">
+        <div class="featured-intro">
+          <p class="section-label">Project Showcase</p>
+          <h2>Built to feel bigger than a class page</h2>
+          <p>
+            These featured projects are presented as complete visual sets, with stronger pacing, clearer storytelling, and a layout that fits the rest of the portfolio.
+          </p>
+        </div>
+
+        <div class="featured-divider"></div>
+
+        <div class="featured-project">
+          <div class="featured-panel">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <img src="42.jpeg" alt="Badin Rams 2026 Basketball featured graphic" class="project-lead" />
+              </div>
+              <div class="col-lg-6">
+                <div class="featured-project-copy">
+                  <p class="section-label">Featured Project One</p>
+                  <h2>Badin Rams 2026 Basketball</h2>
+                  <p>
+                    A graphic-driven project built around the Badin High School boys basketball season in Hamilton, Ohio. This body of work focuses on postseason energy, promotion, and cleaner sports design built to stand out before tip-off.
+                  </p>
+                  <div>
+                    <button class="btn btn-featured-main" type="button" data-bs-toggle="collapse" data-bs-target="#badinReveal">
+                      View Full Project
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="col-md-6">
-              <label for="emailAddress" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="emailAddress" placeholder="Enter your email" />
-            </div>
-
-            <div class="col-md-6">
-              <label for="projectType" class="form-label">Project Type</label>
-              <select class="form-select" id="projectType">
-                <option selected>Select one</option>
-                <option>Game Coverage</option>
-                <option>Creative Design</option>
-                <option>Athlete Portraits</option>
-                <option>Event Coverage</option>
-              </select>
-            </div>
-
-            <div class="col-md-6">
-              <label for="timeline" class="form-label">Timeline</label>
-              <input type="text" class="form-control" id="timeline" placeholder="Ex: next month" />
-            </div>
-
-            <div class="col-12">
-              <label for="message" class="form-label">Project Details</label>
-              <textarea class="form-control" id="message" rows="5" placeholder="Describe the project"></textarea>
-            </div>
-
-            <div class="col-12">
-              <button type="submit" class="btn btn-portfolio">Submit</button>
+            <div class="collapse" id="badinReveal">
+              <div class="project-gallery-grid">
+                <img src="42.jpeg" alt="Badin basketball project image" />
+                <img src="44.jpeg" alt="Badin basketball project image" />
+                <img src="45.jpeg" alt="Badin basketball project image" />
+                <img src="46.jpeg" alt="Badin basketball project image" />
+              </div>
             </div>
           </div>
-        </form>
+        </div>
+
+        <div class="featured-project">
+          <div class="featured-panel">
+            <div class="row g-0">
+              <div class="col-lg-6 order-lg-2">
+                <img src="48.jpg" alt="Black Covered Bridge featured image" class="project-lead" />
+              </div>
+              <div class="col-lg-6 order-lg-1">
+                <div class="featured-project-copy">
+                  <p class="section-label">Featured Project Two</p>
+                  <h2>Architectural Photography</h2>
+                  <p>
+                    A location-based photo study centered on The Black Covered Bridge, also known as Pugh’s Mill Bridge. This set focuses on structure, texture, framing, and the relationship between the bridge and the surrounding environment.
+                  </p>
+                  <div>
+                    <button class="btn btn-featured-main" type="button" data-bs-toggle="collapse" data-bs-target="#bridgeReveal">
+                      View Full Project
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse" id="bridgeReveal">
+              <div class="project-gallery-grid">
+                <img src="48.jpg" alt="Architectural project image" />
+                <img src="49.jpg" alt="Architectural project image" />
+                <img src="50.jpg" alt="Architectural project image" />
+                <img src="51.jpg" alt="Architectural project image" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-project">
+          <div class="featured-panel">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <img src="61.jpg" alt="Miami football featured project image" class="project-lead" />
+              </div>
+              <div class="col-lg-6">
+                <div class="featured-project-copy">
+                  <p class="section-label">Featured Project Three</p>
+                  <h2>Miami Football Gameday</h2>
+                  <p>
+                    A game-day storytelling project built around pregame, sideline access, player moments, fan interaction, and postgame emotion. This set shows the atmosphere around Miami football as much as the game itself.
+                  </p>
+                  <div>
+                    <button class="btn btn-featured-main" type="button" data-bs-toggle="collapse" data-bs-target="#miamiReveal">
+                      View Full Project
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="collapse" id="miamiReveal">
+              <div class="project-gallery-grid">
+                <img src="52.jpeg" alt="Miami football image" />
+                <img src="53.jpeg" alt="Miami football image" />
+                <img src="54.jpg" alt="Miami football image" />
+                <img src="55.jpeg" alt="Miami football image" />
+                <img src="56.jpg" alt="Miami football image" />
+                <img src="57.jpg" alt="Miami football image" />
+                <img src="58.jpeg" alt="Miami football image" />
+                <img src="59.jpeg" alt="Miami football image" />
+                <img src="60.jpg" alt="Miami football image" />
+                <img src="61.jpg" alt="Miami football image" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="instagram-feature mt-5">
+          <p class="section-label">Stay Updated</p>
+          <h2>Instagram is the fastest way to keep up with recent posts</h2>
+          <p>
+          </p>
+          <div class="button-row">
+            <a class="btn" href="https://www.instagram.com/oliver_zureick_creative_/" target="_blank" rel="noopener noreferrer">Follow @oliver_zureick_creatives_</a>
+          </div>
+
+          <div class="featured-mini-grid">
+            <img src="52.jpeg" alt="Instagram preview image" />
+            <img src="42.jpeg" alt="Instagram preview image" />
+            <img src="48.jpg" alt="Instagram preview image" />
+          </div>
+        </div>
       </div>
     </section>
   </main>
