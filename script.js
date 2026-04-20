@@ -26,16 +26,8 @@ $(document).ready(function () {
       if (name === "") {
         $("#output").text("Please enter your name.");
       } else {
-        $("#output").text("Thanks " + name + ", I’d love to connect about your project.");
+        $("#output").text(`Thanks, ${name}. I’d be glad to connect about a project.zureicof@miamioh.edu`);
       }
-    });
-  }
-
-  if ($(".materialboxed").length && typeof M !== "undefined") {
-    const elems = document.querySelectorAll(".materialboxed");
-    M.Materialbox.init(elems, {
-      inDuration: 250,
-      outDuration: 200
     });
   }
 
