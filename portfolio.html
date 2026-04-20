@@ -1,289 +1,379 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Oliver Zureick | Portfolio</title>
+
   <meta
+
     name="description"
+
     content="Photography, design, and sports media work by Oliver Zureick."
+
   />
+
   <link rel="stylesheet" href="styles.css" />
+
   <link
+
     rel="stylesheet"
+
     href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+
   />
+
 </head>
+
 <body>
+
   <header class="site-header">
+
     <div class="container header-inner">
+
       <div class="brand-block">
+
         <h1>Oliver Zureick</h1>
+
         <p class="tagline">Photography • Design • Sports Media</p>
+
       </div>
 
       <nav class="site-nav" aria-label="Main navigation">
+
         <ul class="nav-list">
+
           <li><a href="index.html">Home</a></li>
+
           <li><a href="portfolio.html" class="active">Portfolio</a></li>
+
           <li><a href="gallery.html">Gallery</a></li>
+
           <li><a href="jquery.html">Services</a></li>
+
           <li><a href="contact.html">Contact</a></li>
+
         </ul>
+
       </nav>
+
     </div>
+
   </header>
 
   <main class="page-main">
-    <section class="page-top">
-      <div class="container page-top-inner">
-        <div>
-          <p class="section-label">Selected Work</p>
-          <h2>Photography and design built around sports storytelling.</h2>
+
+    <section class="page-shell">
+
+      <div class="container">
+
+        <div class="page-panel">
+
+          <p class="section-label">Portfolio</p>
+
+          <h2>Selected Work</h2>
+
           <p class="page-intro-text">
-            This page brings together live sports coverage, detail-driven photography,
-            and graphic work built for promotion, identity, and storytelling.
+
+            A focused collection of photography and creative work across baseball,
+
+            basketball, swimming, and sports design.
+
           </p>
+
+          <div class="button-row">
+
+            <button id="hidePortfolioBtn" class="btn btn-secondary" type="button">Toggle Notes</button>
+
+          </div>
+
         </div>
 
-        <button id="hidePortfolioBtn" class="btn btn-secondary" type="button">Toggle Summary</button>
+        <div id="portfolioSummary" class="panel-box">
+
+          <h2>Overview</h2>
+
+          <p>
+
+            This page is meant to show range without feeling cluttered. It mixes game coverage,
+
+            championship moments, detail shots, and graphic work in a cleaner portfolio layout.
+
+          </p>
+
+        </div>
+
+        <div class="page-panel page-panel-tight">
+
+          <p class="section-label">Browse</p>
+
+          <h2>Categories</h2>
+
+          <div class="button-row">
+
+            <button class="filter-btn" data-filter="all" type="button">All</button>
+
+            <button class="filter-btn" data-filter="photo" type="button">Photo</button>
+
+            <button class="filter-btn" data-filter="graphic" type="button">Graphic</button>
+
+          </div>
+
+        </div>
+
+        <section class="tile-grid tile-grid-portfolio">
+
+          <article class="media-tile tile-xl filter-item photo">
+
+            <img class="materialboxed" src="22.png" alt="Baseball action" data-caption="Baseball" />
+
+            <span class="category-tag">Baseball</span>
+
+            <div class="tile-overlay"><h3>Baseball</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-lg filter-item graphic">
+
+            <img class="materialboxed" src="24.png" alt="Graphic design" data-caption="Graphic" />
+
+            <span class="category-tag">Graphic</span>
+
+            <div class="tile-overlay"><h3>Graphic</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-md filter-item photo">
+
+            <img class="materialboxed" src="21.png" alt="Pregame image" data-caption="Pregame" />
+
+            <span class="category-tag">Baseball</span>
+
+            <div class="tile-overlay"><h3>Pregame</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-md filter-item photo">
+
+            <img class="materialboxed" src="23.png" alt="At bat image" data-caption="At Bat" />
+
+            <span class="category-tag">Baseball</span>
+
+            <div class="tile-overlay"><h3>At Bat</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-lg filter-item photo">
+
+            <img class="materialboxed" src="27.jpg" alt="Championship team image" data-caption="Champions" />
+
+            <span class="category-tag">Swimming</span>
+
+            <div class="tile-overlay"><h3>Champions</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-md filter-item photo">
+
+            <img class="materialboxed" src="28.jpg" alt="Podium image" data-caption="Podium" />
+
+            <span class="category-tag">Swimming</span>
+
+            <div class="tile-overlay"><h3>Podium</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-md filter-item photo">
+
+            <img class="materialboxed" src="26.jpg" alt="Swim start image" data-caption="Start" />
+
+            <span class="category-tag">Swimming</span>
+
+            <div class="tile-overlay"><h3>Start</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-md filter-item photo">
+
+            <img class="materialboxed" src="29.jpg" alt="Portrait image" data-caption="Portrait" />
+
+            <span class="category-tag">Swimming</span>
+
+            <div class="tile-overlay"><h3>Portrait</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-md filter-item photo">
+
+            <img class="materialboxed" src="30.jpg" alt="Celebration image" data-caption="Celebration" />
+
+            <span class="category-tag">Swimming</span>
+
+            <div class="tile-overlay"><h3>Celebration</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-sm filter-item photo">
+
+            <img class="materialboxed" src="25.jpg" alt="Detail image" data-caption="Detail" />
+
+            <span class="category-tag">Detail</span>
+
+            <div class="tile-overlay"><h3>Detail</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-sm filter-item graphic">
+
+            <img class="materialboxed" src="14.png" alt="Basketball graphic" data-caption="Poster" />
+
+            <span class="category-tag">Graphic</span>
+
+            <div class="tile-overlay"><h3>Poster</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-sm filter-item graphic">
+
+            <img class="materialboxed" src="17.png" alt="Recognition graphic" data-caption="Feature" />
+
+            <span class="category-tag">Graphic</span>
+
+            <div class="tile-overlay"><h3>Feature</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-sm filter-item photo">
+
+            <img class="materialboxed" src="12.png" alt="Portfolio image" data-caption="Game Day" />
+
+            <span class="category-tag">Basketball</span>
+
+            <div class="tile-overlay"><h3>Game Day</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-sm filter-item photo">
+
+            <img class="materialboxed" src="13.png" alt="Portfolio image" data-caption="Moment" />
+
+            <span class="category-tag">Basketball</span>
+
+            <div class="tile-overlay"><h3>Moment</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-sm filter-item photo">
+
+            <img class="materialboxed" src="15.png" alt="Portfolio image" data-caption="Action" />
+
+            <span class="category-tag">Basketball</span>
+
+            <div class="tile-overlay"><h3>Action</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-sm filter-item photo">
+
+            <img class="materialboxed" src="16.png" alt="Portfolio image" data-caption="Focus" />
+
+            <span class="category-tag">Basketball</span>
+
+            <div class="tile-overlay"><h3>Focus</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-sm filter-item photo">
+
+            <img class="materialboxed" src="18.png" alt="Portfolio image" data-caption="Drive" />
+
+            <span class="category-tag">Basketball</span>
+
+            <div class="tile-overlay"><h3>Drive</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-sm filter-item photo">
+
+            <img class="materialboxed" src="19.png" alt="Portfolio image" data-caption="Pressure" />
+
+            <span class="category-tag">Basketball</span>
+
+            <div class="tile-overlay"><h3>Pressure</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-sm filter-item photo">
+
+            <img class="materialboxed" src="20.png" alt="Portfolio image" data-caption="Finish" />
+
+            <span class="category-tag">Basketball</span>
+
+            <div class="tile-overlay"><h3>Finish</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-sm filter-item photo">
+
+            <img class="materialboxed" src="31.jpg" alt="Portfolio image" data-caption="Field" />
+
+            <span class="category-tag">Baseball</span>
+
+            <div class="tile-overlay"><h3>Field</h3></div>
+
+          </article>
+
+          <article class="media-tile tile-sm filter-item photo">
+
+            <img class="materialboxed" src="32.jpg" alt="Portfolio image" data-caption="Shot" />
+
+            <span class="category-tag">Baseball</span>
+
+            <div class="tile-overlay"><h3>Shot</h3></div>
+
+          </article>
+
+        </section>
+
       </div>
+
     </section>
 
-    <section class="container">
-      <div id="portfolioSummary" class="panel-box">
-        <h2>Portfolio Overview</h2>
-        <p>
-          My portfolio is built around range. I want to show strong live-action work,
-          creative storytelling, and designs that can actually be used by teams,
-          athletes, and media outlets.
-        </p>
-        <p>
-          The goal is to present a body of work that feels professional, consistent,
-          and useful in real sports media settings.
-        </p>
-      </div>
-
-      <div class="filter-bar">
-        <div>
-          <p class="section-label">Browse Work</p>
-          <h2>Filter by category</h2>
-        </div>
-
-        <div class="button-row">
-          <button class="filter-btn" data-filter="all" type="button">Show All</button>
-          <button class="filter-btn" data-filter="photo" type="button">Photos</button>
-          <button class="filter-btn" data-filter="graphic" type="button">Graphics</button>
-        </div>
-      </div>
-
-      <section class="tile-grid tile-grid-portfolio">
-        <article class="media-tile tile-xl filter-item photo">
-          <img class="materialboxed" src="22.png" alt="Baseball action" data-caption="Baseball Action — mechanics, timing, and in-game composition." />
-          <span class="category-tag">Baseball</span>
-          <div class="tile-overlay">
-            <h3>Baseball Action</h3>
-            <p>Mechanics, timing, and in-game composition.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-lg filter-item graphic">
-          <img class="materialboxed" src="24.png" alt="Commitment graphic" data-caption="Commitment Graphic — typography, athlete cutouts, and visual energy." />
-          <span class="category-tag">Design</span>
-          <div class="tile-overlay">
-            <h3>Commitment Graphic</h3>
-            <p>Typography, athlete cutouts, and visual energy.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-md filter-item photo">
-          <img class="materialboxed" src="21.png" alt="Pregame baseball image" data-caption="Pregame Detail — atmosphere and personality." />
-          <span class="category-tag">Baseball</span>
-          <div class="tile-overlay">
-            <h3>Pregame Detail</h3>
-            <p>Atmosphere and personality.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-md filter-item photo">
-          <img class="materialboxed" src="23.png" alt="At the plate baseball image" data-caption="At The Plate — anticipation and timing." />
-          <span class="category-tag">Baseball</span>
-          <div class="tile-overlay">
-            <h3>At The Plate</h3>
-            <p>Anticipation and timing.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-lg filter-item photo">
-          <img class="materialboxed" src="27.jpg" alt="Championship swim team image" data-caption="Team Championship — achievement and emotion." />
-          <span class="category-tag">Swimming</span>
-          <div class="tile-overlay">
-            <h3>Team Championship</h3>
-            <p>Achievement and emotion.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-md filter-item photo">
-          <img class="materialboxed" src="28.jpg" alt="Podium image" data-caption="Podium Moment — championship storytelling." />
-          <span class="category-tag">Swimming</span>
-          <div class="tile-overlay">
-            <h3>Podium Moment</h3>
-            <p>Championship storytelling.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-md filter-item photo">
-          <img class="materialboxed" src="26.jpg" alt="Swimming start image" data-caption="Ready To Go — pre-race tension." />
-          <span class="category-tag">Swimming</span>
-          <div class="tile-overlay">
-            <h3>Ready To Go</h3>
-            <p>Pre-race tension.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-md filter-item photo">
-          <img class="materialboxed" src="29.jpg" alt="Swimming portrait image" data-caption="Post-Race Portrait — range beyond action." />
-          <span class="category-tag">Swimming</span>
-          <div class="tile-overlay">
-            <h3>Post-Race Portrait</h3>
-            <p>Range beyond action.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-md filter-item photo">
-          <img class="materialboxed" src="30.jpg" alt="Celebration image" data-caption="Celebration — confidence, personality, and energy." />
-          <span class="category-tag">Swimming</span>
-          <div class="tile-overlay">
-            <h3>Celebration</h3>
-            <p>Confidence, personality, and energy.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-sm filter-item photo">
-          <img class="materialboxed" src="25.jpg" alt="Detail shot" data-caption="Detail Shot — artistic close-up." />
-          <span class="category-tag">Detail</span>
-          <div class="tile-overlay">
-            <h3>Detail Shot</h3>
-            <p>Artistic close-up.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-sm filter-item graphic">
-          <img class="materialboxed" src="14.png" alt="Basketball graphic" data-caption="Basketball Graphic — promotional design." />
-          <span class="category-tag">Design</span>
-          <div class="tile-overlay">
-            <h3>Basketball Graphic</h3>
-            <p>Promotional design.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-sm filter-item graphic">
-          <img class="materialboxed" src="17.png" alt="Recognition graphic" data-caption="Recognition Graphic — achievement-based design." />
-          <span class="category-tag">Design</span>
-          <div class="tile-overlay">
-            <h3>Recognition Graphic</h3>
-            <p>Achievement-based design.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-sm filter-item photo">
-          <img class="materialboxed" src="12.png" alt="Additional portfolio image" data-caption="Additional portfolio work." />
-          <span class="category-tag">Basketball</span>
-          <div class="tile-overlay">
-            <h3>Additional Work</h3>
-            <p>Extra image added to show more range.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-sm filter-item photo">
-          <img class="materialboxed" src="13.png" alt="Additional portfolio image" data-caption="Additional portfolio work." />
-          <span class="category-tag">Basketball</span>
-          <div class="tile-overlay">
-            <h3>Additional Work</h3>
-            <p>Extra image added to show more range.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-sm filter-item photo">
-          <img class="materialboxed" src="15.png" alt="Additional portfolio image" data-caption="Additional portfolio work." />
-          <span class="category-tag">Basketball</span>
-          <div class="tile-overlay">
-            <h3>Additional Work</h3>
-            <p>Extra image added to show more range.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-sm filter-item photo">
-          <img class="materialboxed" src="16.png" alt="Additional portfolio image" data-caption="Additional portfolio work." />
-          <span class="category-tag">Basketball</span>
-          <div class="tile-overlay">
-            <h3>Additional Work</h3>
-            <p>Extra image added to show more range.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-sm filter-item photo">
-          <img class="materialboxed" src="18.png" alt="Additional portfolio image" data-caption="Additional portfolio work." />
-          <span class="category-tag">Basketball</span>
-          <div class="tile-overlay">
-            <h3>Additional Work</h3>
-            <p>Extra image added to show more range.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-sm filter-item photo">
-          <img class="materialboxed" src="19.png" alt="Additional portfolio image" data-caption="Additional portfolio work." />
-          <span class="category-tag">Basketball</span>
-          <div class="tile-overlay">
-            <h3>Additional Work</h3>
-            <p>Extra image added to show more range.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-sm filter-item photo">
-          <img class="materialboxed" src="20.png" alt="Additional portfolio image" data-caption="Additional portfolio work." />
-          <span class="category-tag">Basketball</span>
-          <div class="tile-overlay">
-            <h3>Additional Work</h3>
-            <p>Extra image added to show more range.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-sm filter-item photo">
-          <img class="materialboxed" src="31.jpg" alt="Additional portfolio image" data-caption="Additional portfolio work." />
-          <span class="category-tag">Portfolio</span>
-          <div class="tile-overlay">
-            <h3>Additional Work</h3>
-            <p>Extra image added to show more range.</p>
-          </div>
-        </article>
-
-        <article class="media-tile tile-sm filter-item photo">
-          <img class="materialboxed" src="32.jpg" alt="Additional portfolio image" data-caption="Additional portfolio work." />
-          <span class="category-tag">Portfolio</span>
-          <div class="tile-overlay">
-            <h3>Additional Work</h3>
-            <p>Extra image added to show more range.</p>
-          </div>
-        </article>
-      </section>
-    </section>
   </main>
 
   <footer class="site-footer">
+
     <div class="container footer-grid">
+
       <div>
+
         <h3>Oliver Zureick</h3>
+
         <p>Photography and design built around sports media.</p>
+
       </div>
+
       <div>
+
         <p><strong>Email:</strong> zureicof@miamioh.edu</p>
+
       </div>
+
     </div>
+
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
   <script src="script.js"></script>
+
 </body>
+
 </html>
