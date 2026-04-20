@@ -26,7 +26,7 @@ $(document).ready(function () {
       if (name === "") {
         $("#output").text("Please enter your name.");
       } else {
-        $("#output").text(`Thanks, ${name}. I’d be glad to connect about a project.zureicof@miamioh.edu`);
+        $("#output").text(`Thanks, ${name}. I’d be glad to connect about a project. You can reach me at zureicof@miamioh.edu.`);
       }
     });
   }
