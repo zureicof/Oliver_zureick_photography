@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    window.html2canvas || document.write('<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"><\/script>');
+  </script>
 </head>
 <body class="builder-page">
   <header class="site-header">
@@ -477,25 +480,93 @@
 
     fields.preset.addEventListener("change", setPresetDefaults);
 
-    document.getElementById("downloadBtn").addEventListener("click", async () => {
-      await document.fonts.ready;
+    function getExportSize() {
+      if (fields.size.value === "story") return { width: 1080, height: 1920 };
+      if (fields.size.value === "landscape") return { width: 1920, height: 1080 };
+      return { width: 1080, height: 1080 };
+    }
 
-      const canvas = await html2canvas(graphic, {
-        backgroundColor: null,
-        scale: 3,
-        useCORS: true,
-        allowTaint: true
-      });
-
-      const link = document.createElement("a");
+    function makeFileName() {
       const cleanName = `${fields.preset.value}-${fields.opponentTeam.value || "graphic"}`
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/(^-|-$)/g, "");
 
-      link.download = `badin-${cleanName}.png`;
-      link.href = canvas.toDataURL("image/png");
-      link.click();
+      return `badin-${cleanName}.png`;
+    }
+
+    document.getElementById("downloadBtn").addEventListener("click", async () => {
+      const downloadButton = document.getElementById("downloadBtn");
+      const originalButtonText = downloadButton.textContent;
+
+      try {
+        if (typeof html2canvas === "undefined") {
+          alert("The download tool did not load yet. Refresh the page and try again.");
+          return;
+        }
+
+        downloadButton.textContent = "Creating PNG...";
+        downloadButton.disabled = true;
+
+        if (document.fonts && document.fonts.ready) {
+          await document.fonts.ready;
+        }
+
+        const exportSize = getExportSize();
+        const exportClone = graphic.cloneNode(true);
+
+        exportClone.id = "badinGraphicExport";
+        exportClone.style.width = `${exportSize.width}px`;
+        exportClone.style.height = `${exportSize.height}px`;
+        exportClone.style.maxWidth = "none";
+        exportClone.style.margin = "0";
+        exportClone.style.boxShadow = "none";
+        exportClone.style.border = "none";
+        exportClone.style.position = "fixed";
+        exportClone.style.left = "-10000px";
+        exportClone.style.top = "0";
+        exportClone.style.zIndex = "-1";
+
+        document.body.appendChild(exportClone);
+
+        const canvas = await html2canvas(exportClone, {
+          backgroundColor: null,
+          scale: 1,
+          useCORS: true,
+          allowTaint: false,
+          logging: false,
+          width: exportSize.width,
+          height: exportSize.height,
+          windowWidth: exportSize.width,
+          windowHeight: exportSize.height
+        });
+
+        exportClone.remove();
+
+        canvas.toBlob((blob) => {
+          if (!blob) {
+            alert("The PNG could not be created. Try using PNG or JPG image uploads and download again.");
+            return;
+          }
+
+          const link = document.createElement("a");
+          const url = URL.createObjectURL(blob);
+          link.download = makeFileName();
+          link.href = url;
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+        }, "image/png");
+      } catch (error) {
+        console.error("Graphic download failed:", error);
+        alert("The download failed. Try refreshing the page, then use PNG or JPG uploads and click Download PNG again.");
+      } finally {
+        const leftoverClone = document.getElementById("badinGraphicExport");
+        if (leftoverClone) leftoverClone.remove();
+        downloadButton.textContent = originalButtonText;
+        downloadButton.disabled = false;
+      }
     });
 
     document.getElementById("resetBtn").addEventListener("click", () => {
