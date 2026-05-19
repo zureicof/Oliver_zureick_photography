@@ -12,7 +12,7 @@
     <div class="container header-inner">
       <div class="brand-block">
         <h1>Oliver Zureick</h1>
-        <p class="tagline">Sports Photography • Creative Services</p>
+        <p class="tagline">Photography • Design • Sports Media</p>
       </div>
 
       <nav class="site-nav" aria-label="Main navigation">
@@ -21,65 +21,132 @@
           <li><a href="portfolio.html" class="active">Portfolio</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="jquery.html">Services</a></li>
-          <li><a href="bootstrap.html">Featured</a></li>
+          <li><a href="graphic-builder.html">Graphic Builder</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <a href="graphic-builder.html">Graphic Builder</a>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="page-main">
-    <section class="standard-page-heading reveal">
-      <div class="container">
-        <p class="section-label">Portfolio</p>
-        <h2>Selected Work</h2>
-        <p class="page-intro-text">
-          A focused collection of photography and creative work across live sports, design,
-          and visual storytelling.
-        </p>
+    <section class="page-top">
+      <div class="container page-top-inner">
+        <div>
+          <p class="section-label">Selected Work</p>
+          <h2>Photography and design built for sports storytelling.</h2>
+          <p class="page-intro-text">
+            This page brings together different parts of my work, from live sports coverage and training visuals
+            to graphic design and promotional content.
+          </p>
+        </div>
+
+        <button id="hidePortfolioBtn" class="btn btn-secondary">Toggle Summary</button>
       </div>
     </section>
 
-    <section class="page-shell reveal">
-      <div class="container">
-        <section class="masonry-gallery portfolio-masonry">
-          <div class="masonry-item hover-image"><img src="22.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="24.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="21.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="23.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="27.jpg" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="28.jpg" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="26.jpg" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="29.jpg" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="30.jpg" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="25.jpg" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="14.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="17.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="12.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="13.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="15.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="16.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="18.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="19.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="20.png" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="31.jpg" alt="Portfolio image" /></div>
-          <div class="masonry-item hover-image"><img src="32.jpg" alt="Portfolio image" /></div>
-        </section>
+    <section class="container">
+      <div id="portfolioSummary" class="panel-box">
+        <h2>Portfolio Overview</h2>
+        <p>
+          My portfolio is built around the idea that sports media should feel intentional, not generic.
+          I want images and graphics to communicate energy, identity, and atmosphere while still looking polished.
+        </p>
+        <p>
+          That means combining strong composition, emotion, and editing choices with a presentation style that feels
+          professional enough for real clients, teams, and future employers.
+        </p>
       </div>
+
+      <div class="filter-bar">
+        <div>
+          <p class="section-label">Browse Work</p>
+          <h2>Filter by category</h2>
+        </div>
+
+        <div class="button-row">
+          <button class="filter-btn" data-filter="all">Show All</button>
+          <button class="filter-btn" data-filter="photo">Photos</button>
+          <button class="filter-btn" data-filter="graphic">Graphics</button>
+        </div>
+      </div>
+
+      <section class="portfolio-grid portfolio-grid-large">
+        <article class="portfolio-card filter-item photo">
+          <img src="19.png" alt="Baseball action image" />
+          <div class="card-body">
+            <h3>Baseball Action</h3>
+            <p>Sports coverage focused on athlete positioning, clean framing, and game atmosphere.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card filter-item photo">
+          <img src="10.png" alt="Weight room training photo" />
+          <div class="card-body">
+            <h3>Weight Room Power</h3>
+            <p>Performance visuals that emphasize effort, body mechanics, and intensity.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card filter-item photo">
+          <img src="11.png" alt="Training media image" />
+          <div class="card-body">
+            <h3>Training Detail</h3>
+            <p>A cleaner sports media look built around controlled lighting and stronger subject focus.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card filter-item photo">
+          <img src="20.png" alt="Baseball portrait" />
+          <div class="card-body">
+            <h3>Baseball Portrait</h3>
+            <p>Portrait work with a more dramatic tone, stronger visual mood, and athlete-centered composition.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card filter-item graphic">
+          <img src="9.png" alt="Florida trip graphic" />
+          <div class="card-body">
+            <h3>Florida Trip Graphic</h3>
+            <p>Promotional visual content using layered imagery, bold type, and sports branding.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card filter-item graphic">
+          <img src="15.png" alt="Basketball gameday poster" />
+          <div class="card-body">
+            <h3>Basketball Gameday Poster</h3>
+            <p>Designed for digital promotion with stronger hierarchy, branding, and social-media appeal.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card filter-item graphic">
+          <img src="16.png" alt="Opening day poster" />
+          <div class="card-body">
+            <h3>Opening Day Poster</h3>
+            <p>Clean sports design work combining typography, cutouts, and team identity.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card filter-item graphic">
+          <img src="17.png" alt="Recognition graphic" />
+          <div class="card-body">
+            <h3>Recognition Graphic</h3>
+            <p>Achievement-based design built for school pride, recognition, and strong visual impact.</p>
+          </div>
+        </article>
+      </section>
     </section>
   </main>
 
-  <footer class="site-footer reveal">
+  <footer class="site-footer">
     <div class="container footer-grid">
-      <div class="footer-brand">
+      <div>
         <h3>Oliver Zureick</h3>
-        <p>Sports Media Student • Photographer • Creative Content</p>
+        <p>Photography and design built around sports media.</p>
       </div>
-      <div class="footer-contact">
+
+      <div>
         <p><strong>Email:</strong> zureicof@miamioh.edu</p>
-        <p><strong>School:</strong> Miami University</p>
-        <p><strong>Location:</strong> Cincinnati, Ohio</p>
       </div>
     </div>
   </footer>

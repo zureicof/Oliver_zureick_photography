@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oliver Zureick | Badin Graphic Builder</title>
+  <meta name="description" content="A customizable Badin High School sports graphic builder for social media graphics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body class="builder-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-block">
+        <h1>Oliver Zureick</h1>
+        <p class="tagline">Badin Graphic Builder • Social Graphics • School Media</p>
+      </div>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="jquery.html">Services</a></li>
+          <li><a href="graphic-builder.html" class="active">Graphic Builder</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main builder-main">
+    <section class="container builder-heading">
+      <p class="section-label builder-label">Badin High School • Hamilton, Ohio</p>
+      <h2>Professional Sports Graphic Builder</h2>
+      <p class="page-intro-text">
+        Choose a preset, upload logos or photos, edit the score and details, then download a finished green Badin-style graphic.
+        The final graphic does not include personal branding, so it can be used for school social media, team posts, announcements, and quick game updates.
+      </p>
+    </section>
+
+    <section class="container builder-layout">
+      <aside class="builder-panel">
+        <div class="builder-panel-heading">
+          <p class="builder-mini-label">Control Center</p>
+          <h3>Build the Graphic</h3>
+        </div>
+
+        <div class="builder-control">
+          <label for="presetSelect">Graphic Preset</label>
+          <select id="presetSelect">
+            <option value="final-score">Final Score</option>
+            <option value="game-day">Game Day</option>
+            <option value="spotlight">Player / Team Spotlight</option>
+            <option value="announcement">Announcement</option>
+          </select>
+        </div>
+
+        <div class="builder-control two-control">
+          <div>
+            <label for="sizeSelect">Export Size</label>
+            <select id="sizeSelect">
+              <option value="square">Square Post</option>
+              <option value="story">Story / Reel</option>
+              <option value="landscape">Landscape</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="themeSelect">Graphic Theme</label>
+            <select id="themeSelect">
+              <option value="standard">Badin Green</option>
+              <option value="blackout">Blackout</option>
+              <option value="whiteout">Whiteout</option>
+              <option value="elite">Elite Dark</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="builder-control two-control">
+          <div>
+            <label for="accentColor">Main Color</label>
+            <input id="accentColor" type="color" value="#007a3d" />
+          </div>
+
+          <div>
+            <label for="secondColor">Second Color</label>
+            <input id="secondColor" type="color" value="#ffffff" />
+          </div>
+        </div>
+
+        <div class="builder-control">
+          <label for="mainImageUpload">Upload Main Photo / Background</label>
+          <input id="mainImageUpload" type="file" accept="image/*" />
+        </div>
+
+        <div class="builder-control two-control">
+          <div>
+            <label for="homeLogoUpload">Upload Badin Logo</label>
+            <input id="homeLogoUpload" type="file" accept="image/*" />
+          </div>
+
+          <div>
+            <label for="opponentLogoUpload">Upload Opponent Logo</label>
+            <input id="opponentLogoUpload" type="file" accept="image/*" />
+          </div>
+        </div>
+
+        <div class="builder-control">
+          <label for="headlineInput">Main Headline</label>
+          <input id="headlineInput" type="text" value="Final Score" />
+        </div>
+
+        <div class="builder-control two-control">
+          <div>
+            <label for="sportInput">Sport / Event</label>
+            <input id="sportInput" type="text" value="Varsity Football" />
+          </div>
+
+          <div>
+            <label for="recordInput">Record / Label</label>
+            <input id="recordInput" type="text" value="Rams Win" />
+          </div>
+        </div>
+
+        <div class="builder-control two-control">
+          <div>
+            <label for="homeTeamInput">Home Team</label>
+            <input id="homeTeamInput" type="text" value="Badin" />
+          </div>
+
+          <div>
+            <label for="opponentTeamInput">Opponent</label>
+            <input id="opponentTeamInput" type="text" value="Opponent" />
+          </div>
+        </div>
+
+        <div class="builder-control two-control">
+          <div>
+            <label for="homeScoreInput">Badin Score</label>
+            <input id="homeScoreInput" type="text" value="35" />
+          </div>
+
+          <div>
+            <label for="opponentScoreInput">Opponent Score</label>
+            <input id="opponentScoreInput" type="text" value="21" />
+          </div>
+        </div>
+
+        <div class="builder-control two-control">
+          <div>
+            <label for="dateInput">Date</label>
+            <input id="dateInput" type="text" value="Friday Night" />
+          </div>
+
+          <div>
+            <label for="timeInput">Time</label>
+            <input id="timeInput" type="text" value="7:00 PM" />
+          </div>
+        </div>
+
+        <div class="builder-control">
+          <label for="locationInput">Location / Detail Line</label>
+          <input id="locationInput" type="text" value="Stephen T. Badin High School • Hamilton, Ohio" />
+        </div>
+
+        <div class="builder-control two-control">
+          <div>
+            <label for="footerLeftInput">Footer Left</label>
+            <input id="footerLeftInput" type="text" value="Badin Athletics" />
+          </div>
+
+          <div>
+            <label for="footerRightInput">Footer Right</label>
+            <input id="footerRightInput" type="text" value="Hamilton, Ohio" />
+          </div>
+        </div>
+
+        <div class="builder-control">
+          <label for="imagePositionSelect">Photo Position</label>
+          <select id="imagePositionSelect">
+            <option value="center center">Center</option>
+            <option value="center top">Top</option>
+            <option value="center bottom">Bottom</option>
+            <option value="left center">Left</option>
+            <option value="right center">Right</option>
+          </select>
+        </div>
+
+        <div class="builder-control two-control">
+          <div>
+            <label for="brightnessRange">Photo Brightness</label>
+            <input id="brightnessRange" type="range" min="35" max="115" value="72" />
+          </div>
+
+          <div>
+            <label for="overlayRange">Overlay Strength</label>
+            <input id="overlayRange" type="range" min="25" max="92" value="68" />
+          </div>
+        </div>
+
+        <div class="builder-toggles">
+          <label><input id="showLogosToggle" type="checkbox" checked /> Show Logos</label>
+          <label><input id="showScoresToggle" type="checkbox" checked /> Show Scores</label>
+          <label><input id="showMetaToggle" type="checkbox" checked /> Show Date / Location</label>
+          <label><input id="showTextureToggle" type="checkbox" checked /> Show Texture</label>
+        </div>
+
+        <div class="button-row builder-buttons">
+          <button id="downloadBtn" class="btn builder-download" type="button">Download PNG</button>
+          <button id="resetBtn" class="btn btn-secondary" type="button">Reset</button>
+        </div>
+      </aside>
+
+      <section class="builder-preview">
+        <div class="builder-preview-top">
+          <div>
+            <p class="builder-mini-label">Live Preview</p>
+            <h3>Finished Graphic</h3>
+          </div>
+          <p>Tip: transparent PNG logos look best.</p>
+        </div>
+
+        <div class="builder-stage-wrap">
+          <article id="badinGraphic" class="badin-graphic-stage preset-final-score theme-standard size-square">
+            <div id="photoLayer" class="graphic-photo-layer"></div>
+            <div id="overlayLayer" class="graphic-overlay-layer"></div>
+            <div class="graphic-green-wash"></div>
+            <div class="graphic-angle-block block-one"></div>
+            <div class="graphic-angle-block block-two"></div>
+            <div id="textureLayer" class="graphic-texture-layer"></div>
+
+            <div class="graphic-topline">
+              <span id="sportText">Varsity Football</span>
+              <span>Stephen T. Badin High School</span>
+            </div>
+
+            <div class="graphic-headline">
+              <h1 id="headlineText">Final <span>Score</span></h1>
+              <p id="recordText">Rams Win</p>
+            </div>
+
+            <div id="scoreboardLayer" class="graphic-scoreboard">
+              <div class="graphic-team home-team">
+                <div id="homeLogoBox" class="graphic-logo-box">
+                  <span>B</span>
+                </div>
+                <div class="team-copy">
+                  <strong id="homeTeamText">Badin</strong>
+                  <em id="homeScoreText">35</em>
+                </div>
+              </div>
+
+              <div class="graphic-divider">VS</div>
+
+              <div class="graphic-team opponent-team">
+                <div id="opponentLogoBox" class="graphic-logo-box opponent-logo">
+                  <span>OPP</span>
+                </div>
+                <div class="team-copy">
+                  <strong id="opponentTeamText">Opponent</strong>
+                  <em id="opponentScoreText">21</em>
+                </div>
+              </div>
+            </div>
+
+            <div id="metaLayer" class="graphic-meta-card">
+              <span id="dateText">Friday Night</span>
+              <span id="timeText">7:00 PM</span>
+              <span id="locationText">Stephen T. Badin High School • Hamilton, Ohio</span>
+            </div>
+
+            <div class="graphic-footer">
+              <span id="footerLeftText">Badin Athletics</span>
+              <span id="footerRightText">Hamilton, Ohio</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Oliver Zureick</h3>
+        <p>Custom sports media tools and graphic production.</p>
+      </div>
+
+      <div>
+        <p><strong>Tool:</strong> Badin Graphic Builder</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const graphic = document.getElementById("badinGraphic");
+    const photoLayer = document.getElementById("photoLayer");
+    const overlayLayer = document.getElementById("overlayLayer");
+    const textureLayer = document.getElementById("textureLayer");
+    const metaLayer = document.getElementById("metaLayer");
+    const scoreboardLayer = document.getElementById("scoreboardLayer");
+
+    const fields = {
+      preset: document.getElementById("presetSelect"),
+      size: document.getElementById("sizeSelect"),
+      theme: document.getElementById("themeSelect"),
+      accent: document.getElementById("accentColor"),
+      second: document.getElementById("secondColor"),
+      headline: document.getElementById("headlineInput"),
+      sport: document.getElementById("sportInput"),
+      record: document.getElementById("recordInput"),
+      homeTeam: document.getElementById("homeTeamInput"),
+      opponentTeam: document.getElementById("opponentTeamInput"),
+      homeScore: document.getElementById("homeScoreInput"),
+      opponentScore: document.getElementById("opponentScoreInput"),
+      date: document.getElementById("dateInput"),
+      time: document.getElementById("timeInput"),
+      location: document.getElementById("locationInput"),
+      footerLeft: document.getElementById("footerLeftInput"),
+      footerRight: document.getElementById("footerRightInput"),
+      imagePosition: document.getElementById("imagePositionSelect"),
+      brightness: document.getElementById("brightnessRange"),
+      overlay: document.getElementById("overlayRange"),
+      showLogos: document.getElementById("showLogosToggle"),
+      showScores: document.getElementById("showScoresToggle"),
+      showMeta: document.getElementById("showMetaToggle"),
+      showTexture: document.getElementById("showTextureToggle")
+    };
+
+    const text = {
+      headline: document.getElementById("headlineText"),
+      sport: document.getElementById("sportText"),
+      record: document.getElementById("recordText"),
+      homeTeam: document.getElementById("homeTeamText"),
+      opponentTeam: document.getElementById("opponentTeamText"),
+      homeScore: document.getElementById("homeScoreText"),
+      opponentScore: document.getElementById("opponentScoreText"),
+      date: document.getElementById("dateText"),
+      time: document.getElementById("timeText"),
+      location: document.getElementById("locationText"),
+      footerLeft: document.getElementById("footerLeftText"),
+      footerRight: document.getElementById("footerRightText")
+    };
+
+    const uploads = {
+      mainImage: document.getElementById("mainImageUpload"),
+      homeLogo: document.getElementById("homeLogoUpload"),
+      opponentLogo: document.getElementById("opponentLogoUpload")
+    };
+
+    const logoBoxes = {
+      home: document.getElementById("homeLogoBox"),
+      opponent: document.getElementById("opponentLogoBox")
+    };
+
+    function formatHeadline(value) {
+      const clean = value.trim() || "Final Score";
+      const parts = clean.split(/\s+/);
+      if (parts.length === 1) return clean;
+      const last = parts.pop();
+      return `${parts.join(" ")} <span>${last}</span>`;
+    }
+
+    function setPresetDefaults() {
+      const preset = fields.preset.value;
+
+      if (preset === "final-score") {
+        fields.headline.value = "Final Score";
+        fields.record.value = "Rams Win";
+        fields.sport.value = "Varsity Football";
+        fields.showScores.checked = true;
+      }
+
+      if (preset === "game-day") {
+        fields.headline.value = "Game Day";
+        fields.record.value = "Badin Rams";
+        fields.sport.value = "Varsity Football";
+        fields.date.value = "Friday Night";
+        fields.time.value = "7:00 PM";
+        fields.showScores.checked = false;
+      }
+
+      if (preset === "spotlight") {
+        fields.headline.value = "Player Spotlight";
+        fields.record.value = "Badin Athletics";
+        fields.sport.value = "Featured Athlete";
+        fields.homeTeam.value = "Badin";
+        fields.opponentTeam.value = "Featured";
+        fields.homeScore.value = "Rams";
+        fields.opponentScore.value = "2026";
+        fields.showScores.checked = false;
+      }
+
+      if (preset === "announcement") {
+        fields.headline.value = "Announcement";
+        fields.record.value = "Badin Athletics";
+        fields.sport.value = "School Update";
+        fields.homeTeam.value = "Badin";
+        fields.opponentTeam.value = "Rams";
+        fields.showScores.checked = false;
+      }
+
+      updateGraphic();
+    }
+
+    function updateGraphic() {
+      graphic.classList.remove("preset-final-score", "preset-game-day", "preset-spotlight", "preset-announcement");
+      graphic.classList.add(`preset-${fields.preset.value}`);
+
+      graphic.classList.remove("theme-standard", "theme-blackout", "theme-whiteout", "theme-elite");
+      graphic.classList.add(`theme-${fields.theme.value}`);
+
+      graphic.classList.remove("size-square", "size-story", "size-landscape");
+      graphic.classList.add(`size-${fields.size.value}`);
+
+      graphic.style.setProperty("--builder-accent", fields.accent.value);
+      graphic.style.setProperty("--builder-second", fields.second.value);
+
+      photoLayer.style.backgroundPosition = fields.imagePosition.value;
+      photoLayer.style.filter = `brightness(${fields.brightness.value}%)`;
+      overlayLayer.style.opacity = fields.overlay.value / 100;
+
+      text.headline.innerHTML = formatHeadline(fields.headline.value);
+      text.sport.textContent = fields.sport.value || "Badin Athletics";
+      text.record.textContent = fields.record.value || "";
+      text.homeTeam.textContent = fields.homeTeam.value || "Badin";
+      text.opponentTeam.textContent = fields.opponentTeam.value || "Opponent";
+      text.homeScore.textContent = fields.homeScore.value || "0";
+      text.opponentScore.textContent = fields.opponentScore.value || "0";
+      text.date.textContent = fields.date.value || "";
+      text.time.textContent = fields.time.value || "";
+      text.location.textContent = fields.location.value || "";
+      text.footerLeft.textContent = fields.footerLeft.value || "";
+      text.footerRight.textContent = fields.footerRight.value || "";
+
+      graphic.classList.toggle("hide-logos", !fields.showLogos.checked);
+      graphic.classList.toggle("hide-scores", !fields.showScores.checked);
+      metaLayer.classList.toggle("is-hidden", !fields.showMeta.checked);
+      textureLayer.classList.toggle("is-hidden", !fields.showTexture.checked);
+    }
+
+    function handleImageUpload(input, callback) {
+      const file = input.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = (event) => callback(event.target.result);
+      reader.readAsDataURL(file);
+    }
+
+    uploads.mainImage.addEventListener("change", () => {
+      handleImageUpload(uploads.mainImage, (src) => {
+        photoLayer.style.backgroundImage = `url("${src}")`;
+      });
+    });
+
+    uploads.homeLogo.addEventListener("change", () => {
+      handleImageUpload(uploads.homeLogo, (src) => {
+        logoBoxes.home.innerHTML = `<img src="${src}" alt="Badin logo">`;
+      });
+    });
+
+    uploads.opponentLogo.addEventListener("change", () => {
+      handleImageUpload(uploads.opponentLogo, (src) => {
+        logoBoxes.opponent.innerHTML = `<img src="${src}" alt="Opponent logo">`;
+      });
+    });
+
+    Object.values(fields).forEach((field) => {
+      field.addEventListener("input", updateGraphic);
+      field.addEventListener("change", updateGraphic);
+    });
+
+    fields.preset.addEventListener("change", setPresetDefaults);
+
+    document.getElementById("downloadBtn").addEventListener("click", async () => {
+      await document.fonts.ready;
+
+      const canvas = await html2canvas(graphic, {
+        backgroundColor: null,
+        scale: 3,
+        useCORS: true,
+        allowTaint: true
+      });
+
+      const link = document.createElement("a");
+      const cleanName = `${fields.preset.value}-${fields.opponentTeam.value || "graphic"}`
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+
+      link.download = `badin-${cleanName}.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      fields.preset.value = "final-score";
+      fields.size.value = "square";
+      fields.theme.value = "standard";
+      fields.accent.value = "#007a3d";
+      fields.second.value = "#ffffff";
+      fields.headline.value = "Final Score";
+      fields.sport.value = "Varsity Football";
+      fields.record.value = "Rams Win";
+      fields.homeTeam.value = "Badin";
+      fields.opponentTeam.value = "Opponent";
+      fields.homeScore.value = "35";
+      fields.opponentScore.value = "21";
+      fields.date.value = "Friday Night";
+      fields.time.value = "7:00 PM";
+      fields.location.value = "Stephen T. Badin High School • Hamilton, Ohio";
+      fields.footerLeft.value = "Badin Athletics";
+      fields.footerRight.value = "Hamilton, Ohio";
+      fields.imagePosition.value = "center center";
+      fields.brightness.value = 72;
+      fields.overlay.value = 68;
+      fields.showLogos.checked = true;
+      fields.showScores.checked = true;
+      fields.showMeta.checked = true;
+      fields.showTexture.checked = true;
+
+      photoLayer.style.backgroundImage = "linear-gradient(135deg, #092d1b, #020403)";
+      logoBoxes.home.innerHTML = "<span>B</span>";
+      logoBoxes.opponent.innerHTML = "<span>OPP</span>";
+      updateGraphic();
+    });
+
+    updateGraphic();
+  </script>
+</body>
+</html>

@@ -7,6 +7,30 @@ $(document).ready(function () {
     });
   }
 
+  if ($("#hidePortfolioBtn").length) {
+    $("#hidePortfolioBtn").click(function () {
+      $("#portfolioSummary").fadeToggle(250);
+    });
+  }
+
+  if ($(".filter-btn").length) {
+    $(".filter-btn").click(function () {
+      const filter = $(this).attr("data-filter");
+
+      $(".filter-btn").removeClass("active-filter");
+      $(this).addClass("active-filter");
+
+      if (filter === "all") {
+        $(".filter-item").hide().fadeIn(300);
+      } else {
+        $(".filter-item").hide();
+        $("." + filter).fadeIn(300);
+      }
+    });
+
+    $('.filter-btn[data-filter="all"]').trigger("click");
+  }
+
   if ($("#hideBtn").length) {
     $("#hideBtn").click(function () {
       $("#box").fadeToggle(250);
@@ -26,9 +50,13 @@ $(document).ready(function () {
       if (name === "") {
         $("#output").text("Please enter your name.");
       } else {
-        $("#output").text(`Thanks, ${name}. I’d be glad to connect about a project. You can reach me at zureicof@miamioh.edu.`);
+        $("#output").text(`Thanks, ${name}. I’d be glad to connect about a project. Email me at zureicof@miamioh.edu.`);
       }
     });
+  }
+
+  if ($("#welcomeMessage").length) {
+    $("#welcomeMessage").show();
   }
 
   const revealItems = document.querySelectorAll(".reveal");
